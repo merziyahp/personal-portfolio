@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-gray-900 text-white py-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="flex items-center justify-center mb-4">
-          <ButterflyIcon className="text-orange-500 text-2xl mr-2" />
+          <ButterflyIcon className="text-orange-500 w-6 h-6 mr-2" />
           <span className="text-lg font-semibold">Merziyah Poonawala</span>
         </div>
         <p className="text-gray-400 mb-4">Senior Product Manager • Transforming Ideas into Impact</p>
