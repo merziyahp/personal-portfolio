@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Navigation } from "@/components/navigation";
-import { Hero } from "@/components/hero";
+import { NewHero } from "@/components/new-hero";
+import { Introduction } from "@/components/introduction";
+import { ProfileSection } from "@/components/profile-section";
 import { About } from "@/components/about";
 import { CareerHighlights } from "@/components/career-highlights";
 import { Skills } from "@/components/skills";
@@ -43,7 +45,8 @@ export default function Home() {
 
   // Extract content by section
   const getContentBySection = (section: string) => {
-    const item = portfolioData?.find((item: any) => item.section === section);
+    if (!portfolioData || !Array.isArray(portfolioData)) return {};
+    const item = portfolioData.find((item: any) => item.section === section);
     return item?.content || {};
   };
 
@@ -58,11 +61,11 @@ export default function Home() {
     <div className="min-h-screen">
       <Navigation />
       
-      <Hero 
-        name={heroContent.name || "Merziyah Poonawala"}
-        title={heroContent.title || "Senior Product Manager"}
-        bio={heroContent.bio || ""}
-      />
+      <NewHero />
+      
+      <Introduction />
+      
+      <ProfileSection />
       
       <About 
         description={aboutContent.description || ""}
