@@ -27,7 +27,7 @@ export function ProfileSection() {
         </div>
         
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Merziyah Poonawala</h1>
-        <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">Senior Product Manager</h2>
+        <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">Principal Product Manager</h2>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 
