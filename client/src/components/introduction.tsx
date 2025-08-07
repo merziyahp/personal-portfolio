@@ -8,12 +8,11 @@ export function Introduction() {
           </h2>
           <div className="prose prose-lg mx-auto text-gray-700 max-w-3xl">
             <p className="text-xl leading-relaxed mb-6">
-              A product leader with 12+ years experience helping teams build clarity and momentum, 
-              going from first line of code to version 1 or untangling complex processes into streamlined workflows.
+              A product leader with 12+ years experience helping business leaders and founders gain clarity and momentum. I translate user insights into viable solutions, untangle complex processes into streamlined workflows, and take teams from first line of code to version 1.0.
             </p>
             <p className="text-lg leading-relaxed mb-6">
               I work with startups and growing teams, connecting the dots between business and tech to get 
-              valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen.
+              valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen. My experience spans numerous industries, including healthcare, talent acquisition, sports, fintech, and marketplaces.
             </p>
           </div>
         </div>
