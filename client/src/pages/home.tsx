@@ -63,9 +63,9 @@ export default function Home() {
       
       <NewHero />
       
-      <Introduction />
-      
       <ProfileSection />
+
+      <Introduction />
       
       <About 
         description={aboutContent.description || ""}
