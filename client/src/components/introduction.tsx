@@ -17,7 +17,7 @@ export function Introduction() {
           </div>
         </div>
 
-        <div className="bg-orange-50/50 p-8 rounded-xl">
+        {/*<div className="bg-orange-50/50 p-8 rounded-xl">
            <h3 className="text-2xl font-bold mb-6 text-gray-900">What you will find here:</h3>
           <p className="text-lg text-gray-700 mb-6">
             This site is a simple reflection of how I work and think.
@@ -32,16 +32,16 @@ export function Introduction() {
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>Case studies from real projects</span>
             </li>
-            {/*<li className="flex items-start">
+            <li className="flex items-start">
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>Freelance services I offer to early-stage or scaling teams</span>
-            </li>*/}
+            </li>
             <li className="flex items-start">
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>A way to get in touch if you want to collaborate</span>
             </li>
           </ul> 
-        </div>
+        </div> */}
       </div>
     </section>
   );
