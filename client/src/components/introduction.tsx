@@ -24,7 +24,7 @@ export function Introduction() {
             This site is a simple reflection of how I work and think.
           </p>
           
-          <ul className="max-w-2xl mx-auto space-y-3 text-gray-700">
+          <ul className="max-w-2xl space-y-3 text-gray-700">
             <li className="flex items-start">
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>My approach to product leadership</span>
