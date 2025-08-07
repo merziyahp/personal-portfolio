@@ -19,8 +19,8 @@ export function Introduction() {
         </div>
 
         <div className="bg-orange-50/50 p-8 rounded-xl">
-          <h3 className="text-2xl font-bold mb-6 text-gray-900 text-center">What you will find here:</h3>
-          <p className="text-lg text-gray-700 mb-6 text-center">
+           <h3 className="text-2xl font-bold mb-6 text-gray-900">What you will find here:</h3>
+          <p className="text-lg text-gray-700 mb-6">
             This site is a simple reflection of how I work and think.
           </p>
           
