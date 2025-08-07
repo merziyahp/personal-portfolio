@@ -24,32 +24,24 @@ export function Introduction() {
             This site is a simple reflection of how I work and think.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">1</span>
-              </div>
-              <p className="text-gray-700">My approach to product leadership</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">2</span>
-              </div>
-              <p className="text-gray-700">Case studies from real projects</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">3</span>
-              </div>
-              <p className="text-gray-700">Freelance services I offer to early-stage or scaling teams</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold">4</span>
-              </div>
-              <p className="text-gray-700">A way to get in touch if you want to collaborate</p>
-            </div>
-          </div>
+          <ul className="max-w-2xl mx-auto space-y-3 text-gray-700">
+            <li className="flex items-start">
+              <span className="text-orange-500 mr-3 mt-1">•</span>
+              <span>My approach to product leadership</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-500 mr-3 mt-1">•</span>
+              <span>Case studies from real projects</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-500 mr-3 mt-1">•</span>
+              <span>Freelance services I offer to early-stage or scaling teams</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-orange-500 mr-3 mt-1">•</span>
+              <span>A way to get in touch if you want to collaborate</span>
+            </li>
+          </ul> 
         </div>
       </div>
     </section>
