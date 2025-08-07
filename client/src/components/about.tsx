@@ -12,7 +12,7 @@ interface AboutProps {
 
 export function About({ description, principles }: AboutProps) {
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="py-8 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/*<h2 className="text-3xl font-bold text-center mb-12 text-gray-900">About Me</h2>
         <div className="prose prose-lg mx-auto text-gray-700"> */}
