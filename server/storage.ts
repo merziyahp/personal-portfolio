@@ -29,7 +29,7 @@ export class MemStorage implements IStorage {
         section: "hero",
         content: {
           name: "Merziyah Poonawala",
-          title: "Senior Product Manager",
+          title: "Principal Product Manager",
           bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces. Experienced in transforming ambiguity into execution and operating in 0-to-1 solution spaces."
         }
       },
