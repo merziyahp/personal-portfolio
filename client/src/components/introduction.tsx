@@ -33,10 +33,10 @@ export function Introduction() {
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>Case studies from real projects</span>
             </li>
-            <li className="flex items-start">
+            {/*<li className="flex items-start">
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>Freelance services I offer to early-stage or scaling teams</span>
-            </li>
+            </li>*/}
             <li className="flex items-start">
               <span className="text-orange-500 mr-3 mt-1">•</span>
               <span>A way to get in touch if you want to collaborate</span>
