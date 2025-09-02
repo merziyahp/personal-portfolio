@@ -1,14 +1,22 @@
-import { type Contact, type InsertContact, type PortfolioContent, type InsertPortfolioContent } from "@shared/schema";
+import {
+  type Contact,
+  type InsertContact,
+  type PortfolioContent,
+  type InsertPortfolioContent,
+} from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
   // Contact methods
   createContact(contact: InsertContact): Promise<Contact>;
   getContacts(): Promise<Contact[]>;
-  
+
   // Portfolio content methods
   getPortfolioContent(section: string): Promise<PortfolioContent | undefined>;
-  updatePortfolioContent(section: string, content: any): Promise<PortfolioContent>;
+  updatePortfolioContent(
+    section: string,
+    content: any,
+  ): Promise<PortfolioContent>;
   getAllPortfolioContent(): Promise<PortfolioContent[]>;
 }
 
@@ -30,32 +38,37 @@ export class MemStorage implements IStorage {
         content: {
           name: "Merziyah Poonawala",
           title: "Principal Product Manager",
-          bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces. Experienced in transforming ambiguity into execution and operating in 0-to-1 solution spaces."
-        }
+          bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces. Experienced in transforming ambiguity into execution and operating in 0-to-1 solution spaces.",
+        },
       },
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions.",
+          description:
+            "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions.",
           principles: [
             {
               title: "Get clear on the why",
-              description: "Every project starts with understanding the problem we're solving and its business impact."
+              description:
+                "Every project starts with understanding the problem we're solving and its business impact.",
             },
             {
               title: "Validate the problem and the user",
-              description: "I prioritize research to ensure we're solving the right problem for the right audience."
+              description:
+                "I prioritize research to ensure we're solving the right problem for the right audience.",
             },
             {
               title: "Build lean and ship early",
-              description: "Incremental releases drive user feedback and product refinement."
+              description:
+                "Incremental releases drive user feedback and product refinement.",
             },
             {
               title: "Be kind. Be transparent. Communicate",
-              description: "Collaboration is key, and I lead with empathy and clarity to foster trust and teamwork."
-            }
-          ]
-        }
+              description:
+                "Collaboration is key, and I lead with empathy and clarity to foster trust and teamwork.",
+            },
+          ],
+        },
       },
       {
         section: "highlights",
@@ -64,20 +77,23 @@ export class MemStorage implements IStorage {
             {
               value: "$85M",
               title: "Funding Secured",
-              description: "Enabled startups to secure $70M and $15M in funding through user insights and strategic product decisions"
+              description:
+                "Enabled startups to secure $70M and $15M in funding through user insights and strategic product decisions",
             },
             {
               value: "6+",
               title: "MVPs Launched",
-              description: "Delivered MVPs within 3-6 month timeframes for apps with TAM of $12M-$600M/year"
+              description:
+                "Delivered MVPs within 3-6 month timeframes for apps with TAM of $12M-$600M/year. 2x potential revenue by uncovering user insights",
             },
             {
               value: "10+",
               title: "Teams Mentored",
-              description: "Guided product teams in agile execution, user research, and roadmap strategy"
-            }
-          ]
-        }
+              description:
+                "Guided product teams in agile execution, user research, and roadmap strategy",
+            },
+          ],
+        },
       },
       {
         section: "skills",
@@ -93,8 +109,8 @@ export class MemStorage implements IStorage {
                 "Agile Methodologies",
                 "User Research & Testing",
                 "Customer Journey Mapping",
-                "Data Analysis"
-              ]
+                "Data Analysis",
+              ],
             },
             {
               title: "Technologies & Tools",
@@ -106,11 +122,11 @@ export class MemStorage implements IStorage {
                 "Google Analytics",
                 "HubSpot",
                 "Python",
-                "SQL"
-              ]
-            }
-          ]
-        }
+                "SQL",
+              ],
+            },
+          ],
+        },
       },
       {
         section: "case-studies",
@@ -118,26 +134,36 @@ export class MemStorage implements IStorage {
           studies: [
             {
               title: "GameChanger: Building a Web Platform for Youth Sports",
-              description: "Led development of a web platform for youth sports management, delivering the first version in 3 months during critical Spring recruitment season.",
+              description:
+                "Led development of a web platform for youth sports management, delivering the first version in 3 months during critical Spring recruitment season.",
               achievements: [
                 "Web app usage doubled within the first year",
                 "Support tickets reduced by 30%",
-                "Foundation for video streaming capabilities"
+                "Foundation for video streaming capabilities",
               ],
-              tags: ["User Research", "Cross-functional Leadership", "Agile Development"]
+              tags: [
+                "User Research",
+                "Cross-functional Leadership",
+                "Agile Development",
+              ],
             },
             {
               title: "Vault Beauty: Beauty Professional Marketplace",
-              description: "Designed and built the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
+              description:
+                "Designed and built the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
               achievements: [
                 "500+ sign-ups in initial launch phase",
                 "Successful pivot to professional market segment",
-                "Built dedicated platform for artist portfolios"
+                "Built dedicated platform for artist portfolios",
               ],
-              tags: ["Market Research", "MVP Development", "Two-sided Marketplace"]
-            }
-          ]
-        }
+              tags: [
+                "Market Research",
+                "MVP Development",
+                "Two-sided Marketplace",
+              ],
+            },
+          ],
+        },
       },
       {
         section: "interests",
@@ -145,35 +171,39 @@ export class MemStorage implements IStorage {
           items: [
             {
               title: "Reading",
-              description: "Currently exploring AI fundamentals and business strategy books",
-              icon: "book"
+              description:
+                "Currently exploring AI fundamentals and business strategy books",
+              icon: "book",
             },
             {
               title: "Hiking",
-              description: "Recent adventures in New Jersey's beautiful trail systems",
-              icon: "mountain"
+              description:
+                "Recent adventures in New Jersey's beautiful trail systems",
+              icon: "mountain",
             },
             {
               title: "Fitness",
-              description: "Maintaining wellness through structured workout plans",
-              icon: "dumbbell"
+              description:
+                "Maintaining wellness through structured workout plans",
+              icon: "dumbbell",
             },
             {
               title: "Learning",
-              description: "Recently completed AI and prompt engineering certifications",
-              icon: "graduation-cap"
-            }
-          ]
-        }
-      }
+              description:
+                "Recently completed AI and prompt engineering certifications",
+              icon: "graduation-cap",
+            },
+          ],
+        },
+      },
     ];
 
-    defaultContent.forEach(item => {
+    defaultContent.forEach((item) => {
       const content: PortfolioContent = {
         id: randomUUID(),
         section: item.section,
         content: item.content,
-        updatedAt: new Date().toISOString()
+        updatedAt: new Date().toISOString(),
       };
       this.portfolioContent.set(item.section, content);
     });
@@ -181,10 +211,10 @@ export class MemStorage implements IStorage {
 
   async createContact(insertContact: InsertContact): Promise<Contact> {
     const id = randomUUID();
-    const contact: Contact = { 
-      ...insertContact, 
+    const contact: Contact = {
+      ...insertContact,
       id,
-      createdAt: new Date().toISOString()
+      createdAt: new Date().toISOString(),
     };
     this.contacts.set(id, contact);
     return contact;
@@ -194,17 +224,22 @@ export class MemStorage implements IStorage {
     return Array.from(this.contacts.values());
   }
 
-  async getPortfolioContent(section: string): Promise<PortfolioContent | undefined> {
+  async getPortfolioContent(
+    section: string,
+  ): Promise<PortfolioContent | undefined> {
     return this.portfolioContent.get(section);
   }
 
-  async updatePortfolioContent(section: string, content: any): Promise<PortfolioContent> {
+  async updatePortfolioContent(
+    section: string,
+    content: any,
+  ): Promise<PortfolioContent> {
     const existing = this.portfolioContent.get(section);
     const portfolioContent: PortfolioContent = {
       id: existing?.id || randomUUID(),
       section,
       content,
-      updatedAt: new Date().toISOString()
+      updatedAt: new Date().toISOString(),
     };
     this.portfolioContent.set(section, portfolioContent);
     return portfolioContent;
