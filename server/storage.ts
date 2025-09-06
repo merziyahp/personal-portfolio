@@ -173,29 +173,29 @@ export class MemStorage implements IStorage {
           substackUrl: "https://merziyahpoonawala.substack.com/",
           featured: [
             {
-              title: "The Art of Product Discovery",
-              description: "How to validate problems before building solutions",
-              publishedAt: "2024-01-15",
-              readTime: "5 min read",
-              url: "https://your-substack-url.substack.com/p/art-of-product-discovery",
-              tags: ["Product Management", "User Research"]
-            },
-            {
-              title: "AI in Product Management",
-              description: "Leveraging AI tools to enhance product decision-making",
-              publishedAt: "2024-01-10",
-              readTime: "7 min read", 
-              url: "https://your-substack-url.substack.com/p/ai-in-product-management",
-              tags: ["AI", "Product Strategy"]
-            },
-            {
-              title: "Building MVPs That Matter",
-              description: "A framework for creating meaningful minimum viable products",
-              publishedAt: "2024-01-05",
-              readTime: "6 min read",
-              url: "https://your-substack-url.substack.com/p/building-mvps-that-matter",
-              tags: ["MVP", "Startup Strategy"]
-            }
+              title: "I Hadn’t Coded in a Decade. Then I Built an AI Agent",
+              description: "My first experience vibecoding - an AI Agent",
+              publishedAt: "2025-08-19",
+              //readTime: "5 min read",
+              url: "https://merziyahpoonawala.substack.com/p/i-hadnt-coded-in-a-decade-then-i",
+              tags: ["Agents", "Vibecoding"]
+            }//,
+            //{
+              //title: "AI in Product Management",
+              //description: "Leveraging AI tools to enhance product decision-making",
+              //publishedAt: "2024-01-10",
+              //readTime: "7 min read", 
+              //url: "https://your-substack-url.substack.com/p/ai-in-product-management",
+              //tags: ["AI", "Product Strategy"]
+            //},
+            //{
+              //title: "Building MVPs That Matter",
+              //description: "A framework for creating meaningful minimum viable products",
+              //publishedAt: "2024-01-05",
+              //readTime: "6 min read",
+              //url: "https://your-substack-url.substack.com/p/building-mvps-that-matter",
+              //tags: ["MVP", "Startup Strategy"]
+            //}
           ]
         },
       },
