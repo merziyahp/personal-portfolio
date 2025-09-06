@@ -42,6 +42,12 @@ export function Navigation() {
               Personal
             </button>
             <button 
+              onClick={() => scrollToSection('writing')}
+              className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
+            >
+              Writing
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >

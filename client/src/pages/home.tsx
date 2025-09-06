@@ -7,6 +7,7 @@ import { About } from "@/components/about";
 import { CareerHighlights } from "@/components/career-highlights";
 import { Skills } from "@/components/skills";
 import { CaseStudies } from "@/components/case-studies";
+import { Writing } from "@/components/writing";
 import { PersonalInterests } from "@/components/personal-interests";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
@@ -55,8 +56,8 @@ export default function Home() {
   const highlightsContent = getContentBySection('highlights');
   const skillsContent = getContentBySection('skills');
   const caseStudiesContent = getContentBySection('case-studies');
+  const writingContent = getContentBySection('writing');
   const interestsContent = getContentBySection('interests');
-
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -79,6 +80,13 @@ export default function Home() {
       
       <CaseStudies 
         studies={caseStudiesContent.studies || []}
+      />
+      
+      <Writing 
+        title={writingContent.title || "Writing & Insights"}
+        description={writingContent.description || ""}
+        substackUrl={writingContent.substackUrl || "#"}
+        featured={writingContent.featured || []}
       />
       
       <PersonalInterests 
