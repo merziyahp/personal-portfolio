@@ -170,7 +170,7 @@ export class MemStorage implements IStorage {
         content: {
           title: "Writing & Insights",
           description: "Thoughts on product management, AI, and building great products",
-          substackUrl: "https://your-substack-url.substack.com",
+          substackUrl: "https://merziyahpoonawala.substack.com/",
           featured: [
             {
               title: "The Art of Product Discovery",
