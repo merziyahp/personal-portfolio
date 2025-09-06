@@ -93,11 +93,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-    // In a real implementation, this would serve the actual PDF file
-    // For now, we'll redirect to a placeholder or return an error
-    res.status(501).json({ 
-      error: "Resume download not implemented", 
-      message: "PDF file needs to be uploaded to server" 
+        const resumePath = path.join(__dirname, "../client/public/Merziyah Poonawala - Resume.pdf");
+    
+    // Set headers for file download
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename="Merziyah-Poonawala-Resume.pdf"');
+    
+    // Send the file
+    res.sendFile(resumePath, (err) => {
+      if (err) {
+        console.error('Error sending resume file:', err);
+        res.status(404).json({ 
+          error: "Resume file not found", 
+          message: "Please upload resume.pdf to the client/public folder" 
+        });
+      }
     });
   });
 
