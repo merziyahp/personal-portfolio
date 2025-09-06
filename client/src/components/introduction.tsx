@@ -1,4 +1,15 @@
-export function Introduction() {
+import { ButterflyIcon } from "./icons/butterfly";
+
+interface Principle {
+  title: string;
+  description: string;
+}
+
+interface IntroductionProps {
+  principles?: Principle[];
+}
+
+export function Introduction({ principles = [] }: IntroductionProps) {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,6 +28,21 @@ export function Introduction() {
           </div>
         </div>
 
+        {principles.length > 0 && (
+          <div className="bg-orange-50/50 p-6 rounded-xl max-w-3xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-orange-600 text-center">My Product Principles:</h3>
+            <ul className="space-y-3 text-gray-700">
+              {principles.map((principle, index) => (
+                <li key={index} className="flex items-start">
+                  <ButterflyIcon className="text-orange-500 mr-3 mt-1 w-4 h-4 flex-shrink-0" />
+                  <span>
+                    <strong>{principle.title}:</strong> {principle.description}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         {/*<div className="bg-orange-50/50 p-8 rounded-xl">
            <h3 className="text-2xl font-bold mb-6 text-gray-900">What you will find here:</h3>
           <p className="text-lg text-gray-700 mb-6">

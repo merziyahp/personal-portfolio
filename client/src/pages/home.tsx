@@ -65,10 +65,7 @@ export default function Home() {
       
       <ProfileSection />
 
-      <Introduction />
-      
-      <About 
-        description={aboutContent.description || ""}
+      <Introduction
         principles={aboutContent.principles || []}
       />
       
