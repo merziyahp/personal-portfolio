@@ -93,7 +93,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-        const resumePath = path.join(__dirname, "../client/public/Merziyah Poonawala - Resume.pdf");
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+    const resumePath = path.join(__dirname, "../client/public/Merziyah Poonawala - Resume.pdf");
     
     // Set headers for file download
     res.setHeader('Content-Type', 'application/pdf');
