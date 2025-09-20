@@ -29,9 +29,13 @@ export function Hero({ name, title, bio }: HeroProps) {
           <ButterflyIcon className="w-10 h-10 text-orange-500" />
         </div>
         
-        {/* Professional headshot placeholder - round styling */}
-        <div className="w-32 h-32 mx-auto rounded-full bg-gray-200 mb-6 shadow-lg flex items-center justify-center">
-          <span className="text-gray-500 text-sm">Profile Photo</span>
+        {/* Professional headshot - round styling */}
+        <div className="w-32 h-32 mx-auto rounded-full bg-gray-200 mb-6 shadow-lg overflow-hidden">
+          <img 
+            src="/assets/Screenshot 2025-07-28 at 9.29.17 PM_1753752578584.png" 
+            alt="Merziyah Poonawala - Professional Headshot"
+            className="w-full h-full object-cover"
+          />
         </div>
         
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{name}</h1>
