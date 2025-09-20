@@ -36,6 +36,12 @@ export function Navigation() {
               Case Studies
             </button>
             <button 
+              onClick={() => scrollToSection('writing')}
+              className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
+            >
+              Writing
+            </button>
+            <button 
               onClick={() => scrollToSection('personal')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
