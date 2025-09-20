@@ -32,7 +32,7 @@ export function Hero({ name, title, bio }: HeroProps) {
         {/* Professional headshot - round styling */}
         <div className="w-32 h-32 mx-auto rounded-full bg-gray-200 mb-6 shadow-lg overflow-hidden">
           <img 
-            src="/assets/Screenshot 2025-07-28 at 9.29.17 PM_1753752578584.png" 
+            src="/images/profile-photo.png" 
             alt="Merziyah Poonawala - Professional Headshot"
             className="w-full h-full object-cover"
           />

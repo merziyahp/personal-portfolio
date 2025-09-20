@@ -20,7 +20,7 @@ export function ProfileSection() {
          {/* Professional headshot - round styling */}
         <div className="w-40 h-40 mx-auto rounded-full bg-gray-200 mb-8 shadow-lg overflow-hidden">
           <img 
-            src="/assets/Screenshot 2025-07-28 at 9.29.17 PM_1753752578584.png" 
+            src="/images/Profile-photo.png" 
             alt="Merziyah Poonawala - Professional Headshot"
             className="w-full h-full object-cover"
           />
