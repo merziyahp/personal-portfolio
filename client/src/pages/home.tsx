@@ -88,32 +88,31 @@ export default function Home() {
       <Writing
         title="My Writing"
         description="Thoughts on product management, leadership, and building great products."
-        substackUrl="https://yoursubstack.substack.com"
+        substackUrl="https://substack.com/@merziyahpoonawala"
         featured={[
           {
-            title: "Building Products in Uncertain Times",
-            description: "How to navigate ambiguity and make decisive product decisions when the path isn't clear.",
-            publishedAt: "2024-01-15",
-            readTime: "5 min read",
-            url: "https://yoursubstack.substack.com/p/building-products-uncertain-times",
-            tags: ["Product Management", "Strategy", "Leadership"]
+            title: "I Hadn't Coded In a Decade. Then I Built an Agent",
+            description: "How curiosity and ChatGPT got me through HuggingFace’s AI Agent Course",
+            publishedAt: "2025-08-19",
+            url: "https://open.substack.com/pub/merziyahpoonawala/p/i-hadnt-coded-in-a-decade-then-i?r=5iuj7j&utm_campaign=post&utm_medium=web",
+            tags: ["Product Management", "VibeCoding", "Playing with AI"]
           },
-          {
-            title: "The MVP Mindset: Ship Early, Learn Fast",
-            description: "Why launching imperfect products leads to better outcomes than waiting for perfection.",
-            publishedAt: "2024-01-08",
-            readTime: "4 min read",
-            url: "https://yoursubstack.substack.com/p/mvp-mindset-ship-early",
-            tags: ["MVP", "Product Development", "User Research"]
-          },
-          {
-            title: "Cross-functional Leadership Without Authority",
-            description: "Practical strategies for leading teams and driving outcomes when you don't manage everyone.",
-            publishedAt: "2024-01-01",
-            readTime: "6 min read",
-            url: "https://yoursubstack.substack.com/p/cross-functional-leadership",
-            tags: ["Leadership", "Team Management", "Product Management"]
-          }
+          //{
+          //  title: "The MVP Mindset: Ship Early, Learn Fast",
+          //  description: "Why launching imperfect products leads to better outcomes than waiting for perfection.",
+          //  publishedAt: "2024-01-08",
+          //  readTime: "4 min read",
+          //  url: "https://yoursubstack.substack.com/p/mvp-mindset-ship-early",
+          //  tags: ["MVP", "Product Development", "User Research"]
+          //},
+          //{
+          //  title: "Cross-functional Leadership Without Authority",
+          //  description: "Practical strategies for leading teams and driving outcomes when you don't manage everyone.",
+          // publishedAt: "2024-01-01",
+          //  readTime: "6 min read",
+          //  url: "https://yoursubstack.substack.com/p/cross-functional-leadership",
+          //  tags: ["Leadership", "Team Management", "Product Management"]
+        //  }
         ]}
       />
       
