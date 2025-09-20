@@ -20,9 +20,13 @@ export function CaseStudies({ studies }: CaseStudiesProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {studies.map((study, index) => (
             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              {/* Placeholder for workspace image */}
-              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
-                <span className="text-gray-500">Professional Workspace</span>
+              {/* Professional workspace image */}
+              <div className="w-full h-48 bg-gray-200 overflow-hidden">
+                <img 
+                  src="/assets/Screenshot 2025-07-28 at 9.29.17 PM_1753752578584.png" 
+                  alt={`${study.title} - Professional workspace`}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>
