@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Serve static files from attached_assets
-app.use('/assets', express.static(path.join(__dirname, '../attached_assets')));
+app.use('/assets', express.static(path.join(import.meta.dirname, '../attached_assets')));
 
 app.use((req, res, next) => {
   const start = Date.now();

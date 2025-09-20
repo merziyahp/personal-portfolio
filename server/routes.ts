@@ -59,7 +59,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
       try {
-      const resumePath = path.join(__dirname, "../attached_assets/Merziyah Poonawala - Resume_1753731715293.pdf");
+      const resumePath = path.join(import.meta.dirname, "../attached_assets/Merziyah Poonawala - Resume_1753731715293.pdf");
       res.download(resumePath, "Merziyah_Poonawala_Resume.pdf", (err) => {
         if (err) {
           console.error("Error downloading resume:", err);
