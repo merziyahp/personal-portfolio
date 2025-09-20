@@ -20,19 +20,9 @@ export function CaseStudies({ studies }: CaseStudiesProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {studies.map((study, index) => (
             <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              {/* Case study image */}
-              <div className="w-full h-48 bg-gray-100 overflow-hidden">
-                <img 
-                  src={`/case-study-${index + 1}.png`}
-                  alt={`${study.title} - Case Study Visual.`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    // Fallback to a generic image if specific case study image doesn't exist
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/case-study-default.jpg';
-                    target.onerror = null; // Prevent infinite loop
-                  }}
-                />
+              {/* Placeholder for workspace image */}
+              <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+                <span className="text-gray-500">Professional Workspace</span>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>

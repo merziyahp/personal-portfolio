@@ -48,7 +48,7 @@ export interface PortfolioData {
 export const portfolioSchema: PortfolioData = {
   hero: {
     name: "Merziyah Poonawala",
-    title: "Principal Product Manager",
+    title: "Senior Product Manager",
     bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces."
   },
   about: {

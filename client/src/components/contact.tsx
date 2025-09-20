@@ -64,10 +64,10 @@ export function Contact() {
                 <Mail className="text-orange-500 mr-3 h-5 w-5" />
                 <span>merziyahpoonawala@gmail.com</span>
               </div>
-              {/*<div className="flex items-center text-gray-600">
+              <div className="flex items-center text-gray-600">
                 <Phone className="text-orange-500 mr-3 h-5 w-5" />
                 <span>713-240-1242</span>
-              </div>*/}
+              </div>
               <div className="flex items-center text-gray-600">
                 <Linkedin className="text-orange-500 mr-3 h-5 w-5" />
                 <a 

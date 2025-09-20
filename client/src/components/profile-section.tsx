@@ -17,17 +17,13 @@ export function ProfileSection() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Professional headshot */}
-        <div className="w-40 h-40 mx-auto rounded-full mb-8 shadow-lg overflow-hidden">
-          <img 
-            src="/Profile-photo.png" 
-            alt="Merziyah Poonawala - Professional headshot"
-            className="w-full h-full object-cover"
-          />
+        {/* Professional headshot placeholder - round styling */}
+        <div className="w-40 h-40 mx-auto rounded-full bg-gray-200 mb-8 shadow-lg flex items-center justify-center">
+          <span className="text-gray-500 text-sm">Profile Photo</span>
         </div>
         
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Merziyah Poonawala</h1>
-        <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">Principal Product Manager</h2>
+        <h2 className="text-xl md:text-2xl text-gray-600 mb-8 font-medium">Senior Product Manager</h2>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button 

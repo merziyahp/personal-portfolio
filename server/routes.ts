@@ -4,7 +4,6 @@ import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import path from "path";
-import nodemailer from "nodemailer";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form submission
@@ -12,40 +11,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const contactData = insertContactSchema.parse(req.body);
       const contact = await storage.createContact(contactData);
-
-      
-      // Send email notification
-      try {
-        const transporter = nodemailer.createTransport({
-          service: 'gmail',
-          auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_APP_PASSWORD
-          }
-        });
-
-        const mailOptions = {
-          from: process.env.EMAIL_USER,
-          to: 'merziyahpoonawala@gmail.com',
-          subject: `New Portfolio Contact: ${contactData.name}`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${contactData.name}</p>
-            <p><strong>Email:</strong> ${contactData.email}</p>
-            <p><strong>Message:</strong></p>
-            <p>${contactData.message.replace(/\n/g, '<br>')}</p>
-            <hr>
-            <p><small>Submitted at: ${new Date().toLocaleString()}</small></p>
-          `
-        };
-
-        await transporter.sendMail(mailOptions);
-        console.log('Email notification sent successfully');
-      } catch (emailError) {
-        console.error('Failed to send email notification:', emailError);
-        // Don't fail the request if email sending fails
-      }
-            
       res.json({ success: true, contact });
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -93,22 +58,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Resume download endpoint
   app.get("/api/resume", (req, res) => {
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-    const resumePath = path.join(__dirname, "../client/public/Merziyah Poonawala - Resume.pdf");
-    
-    // Set headers for file download
-    res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename="Merziyah-Poonawala-Resume.pdf"');
-    
-    // Send the file
-    res.sendFile(resumePath, (err) => {
-      if (err) {
-        console.error('Error sending resume file:', err);
-        res.status(404).json({ 
-          error: "Resume file not found", 
-          message: "Please upload resume.pdf to the client/public folder" 
-        });
-      }
+    // In a real implementation, this would serve the actual PDF file
+    // For now, we'll redirect to a placeholder or return an error
+    res.status(501).json({ 
+      error: "Resume download not implemented", 
+      message: "PDF file needs to be uploaded to server" 
     });
   });
 

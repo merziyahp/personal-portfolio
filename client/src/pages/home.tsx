@@ -56,17 +56,20 @@ export default function Home() {
   const highlightsContent = getContentBySection('highlights');
   const skillsContent = getContentBySection('skills');
   const caseStudiesContent = getContentBySection('case-studies');
-  const writingContent = getContentBySection('writing');
   const interestsContent = getContentBySection('interests');
+
   return (
     <div className="min-h-screen">
       <Navigation />
       
       <NewHero />
       
+      <Introduction />
+      
       <ProfileSection />
-
-      <Introduction
+      
+      <About 
+        description={aboutContent.description || ""}
         principles={aboutContent.principles || []}
       />
       
@@ -78,15 +81,40 @@ export default function Home() {
         categories={skillsContent.categories || []}
       />
       
-      <CaseStudies 
+            <CaseStudies 
         studies={caseStudiesContent.studies || []}
       />
       
-      <Writing 
-        title={writingContent.title || "Writing & Insights"}
-        description={writingContent.description || ""}
-        substackUrl={writingContent.substackUrl || "#"}
-        featured={writingContent.featured || []}
+      <Writing
+        title="My Writing"
+        description="Thoughts on product management, leadership, and building great products."
+        substackUrl="https://yoursubstack.substack.com"
+        featured={[
+          {
+            title: "Building Products in Uncertain Times",
+            description: "How to navigate ambiguity and make decisive product decisions when the path isn't clear.",
+            publishedAt: "2024-01-15",
+            readTime: "5 min read",
+            url: "https://yoursubstack.substack.com/p/building-products-uncertain-times",
+            tags: ["Product Management", "Strategy", "Leadership"]
+          },
+          {
+            title: "The MVP Mindset: Ship Early, Learn Fast",
+            description: "Why launching imperfect products leads to better outcomes than waiting for perfection.",
+            publishedAt: "2024-01-08",
+            readTime: "4 min read",
+            url: "https://yoursubstack.substack.com/p/mvp-mindset-ship-early",
+            tags: ["MVP", "Product Development", "User Research"]
+          },
+          {
+            title: "Cross-functional Leadership Without Authority",
+            description: "Practical strategies for leading teams and driving outcomes when you don't manage everyone.",
+            publishedAt: "2024-01-01",
+            readTime: "6 min read",
+            url: "https://yoursubstack.substack.com/p/cross-functional-leadership",
+            tags: ["Leadership", "Team Management", "Product Management"]
+          }
+        ]}
       />
       
       <PersonalInterests 

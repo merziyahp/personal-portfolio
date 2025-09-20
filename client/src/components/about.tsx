@@ -12,14 +12,13 @@ interface AboutProps {
 
 export function About({ description, principles }: AboutProps) {
   return (
-    <section id="about" className="py-8 bg-white">
+    <section id="about" className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/*<h2 className="text-3xl font-bold text-center mb-12 text-gray-900">About Me</h2>
-        <div className="prose prose-lg mx-auto text-gray-700"> */}
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">About Me</h2>
         <div className="prose prose-lg mx-auto text-gray-700">
-          {/*<p className="text-center mb-8 text-lg leading-relaxed">
+          <p className="text-center mb-8 text-lg leading-relaxed">
             {description}
-          </p> */}
+          </p>
           
           <div className="bg-orange-50/50 p-6 rounded-xl">
             <h3 className="text-xl font-semibold mb-4 text-orange-600">My Product Principles:</h3>

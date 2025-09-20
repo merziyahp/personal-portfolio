@@ -9,7 +9,7 @@ export function Footer() {
           <ButterflyIcon className="text-orange-500 w-6 h-6 mr-2" />
           <span className="text-lg font-semibold">Merziyah Poonawala</span>
         </div>
-        <p className="text-gray-400 mb-4">Principal Product Manager • Transforming Ideas into Impact</p>
+        <p className="text-gray-400 mb-4">Senior Product Manager • Transforming Ideas into Impact</p>
         <div className="flex justify-center space-x-6">
           <a 
             href="mailto:merziyahpoonawala@gmail.com" 
