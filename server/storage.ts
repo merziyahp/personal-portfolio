@@ -36,7 +36,7 @@ export class MemStorage implements IStorage {
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions.",
+          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions. <p>I work with startups and growing teams, connecting the dots between business and tech to get valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen.",
           principles: [
             {
               title: "Get clear on the why",
