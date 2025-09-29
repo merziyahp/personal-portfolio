@@ -25,7 +25,7 @@ export function About({ description, principles }: AboutProps) {
             <ul className="space-y-3 text-gray-700">
               {principles.map((principle, index) => (
                 <li key={index} className="flex items-start">
-                  <ButterflyIcon className="text-orange-500 mr-3 mt-1 w-4 h-4 flex-shrink-0" />
+                  <ButterflyIcon className="w-10 h-10 text-orange-500" />
                   <span>
                     <strong>{principle.title}:</strong> {principle.description}
                   </span>

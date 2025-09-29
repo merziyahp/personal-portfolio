@@ -23,10 +23,10 @@ export function CaseStudies({ studies }: CaseStudiesProps) {
               {/* Professional workspace image */}
               <div className="w-full h-48 bg-gray-200 overflow-hidden">
                 <img 
-                  src="/assets/Screenshot 2025-07-28 at 9.29.17 PM_1753752578584.png" 
-                  alt={`${study.title} - Professional workspace`}
-                  className="w-full h-full object-cover"
-                />
+  src={`/images/case-studies-${index + 1}.png`} 
+  alt={`${study.title} - Professional workspace`}
+  className="w-full h-full object-cover"
+/>
               </div>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-900">{study.title}</h3>
