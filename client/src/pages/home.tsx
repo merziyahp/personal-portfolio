@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Navigation } from "@/components/navigation";
 import { NewHero } from "@/components/new-hero";
-import { Introduction } from "@/components/introduction";
 import { ProfileSection } from "@/components/profile-section";
 import { About } from "@/components/about";
 import { CareerHighlights } from "@/components/career-highlights";
@@ -63,8 +62,6 @@ export default function Home() {
       <Navigation />
       
       <NewHero />
-      
-      <Introduction />
       
       <ProfileSection />
       
