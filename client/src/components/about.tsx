@@ -14,7 +14,7 @@ export function About({ description, principles }: AboutProps) {
   return (
     <section id="about" className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Hi, I</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">👋 Hi there!</h2>
         <div className="prose prose-lg mx-auto text-gray-700">
           <p className="text-xl leading-relaxed mb-6">
             A product leader with 12+ years experience helping teams build clarity and momentum, 
