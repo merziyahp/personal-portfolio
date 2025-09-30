@@ -52,7 +52,7 @@ export class MemStorage implements IStorage {
             },
             {
               title: "Be kind. Be transparent. Communicate",
-              description: "Collaboration is key; I foster trust and teamwork by creating a team vision and leading with empathy."
+              description: "Collaboration is key; I foster trust and teamwork through empathy and clarity on team goals."
             }
           ]
         }
@@ -132,8 +132,8 @@ export class MemStorage implements IStorage {
               description: "Designed and built the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
               achievements: [
                 "500+ sign-ups in initial launch phase",
-                "Successful pivot to professional market segment led to 2x revenue per user",
-                "Defined go-to-market framework for activation and engagement metrics"
+                "2x-ed revenue per use by successfully pivoting to a professional market segment",
+                "Defined activation and engagement KPIs for the product post-launch"
               ],
               tags: ["Market Research", "MVP Development", "Two-sided Marketplace"]
             }

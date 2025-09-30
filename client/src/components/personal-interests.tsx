@@ -1,4 +1,5 @@
 import { Book, Mountain, Dumbbell, GraduationCap } from "lucide-react";
+import { Link } from "wouter";
 
 interface Interest {
   title: string;
@@ -36,8 +37,10 @@ export function PersonalInterests({ items }: PersonalInterestsProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item, index) => {
             const IconComponent = iconMap[item.icon as keyof typeof iconMap];
-            return (
-              <div key={index} className="group">
+            const isReadingCard = item.title.toLowerCase() === 'reading';
+            
+            const cardContent = (
+              <div className={`group ${isReadingCard ? 'cursor-pointer hover:transform hover:scale-105 transition-transform duration-200' : ''}`}>
                 {/* Image with overlay title */}
                 <div className="relative h-48 rounded-xl overflow-hidden mb-3 shadow-lg">
                   {/* Gradient background as placeholder for image */}
@@ -58,6 +61,18 @@ export function PersonalInterests({ items }: PersonalInterestsProps) {
                 
                 {/* Description below image */}
                 <p className="text-sm text-gray-600 text-center">{item.description}</p>
+              </div>
+            );
+
+            return (
+              <div key={index}>
+                {isReadingCard ? (
+                  <Link href="/reading">
+                    {cardContent}
+                  </Link>
+                ) : (
+                  cardContent
+                )}
               </div>
             );
           })}
