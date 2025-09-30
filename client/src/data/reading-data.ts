@@ -17,22 +17,16 @@ export const readingData: ReadingSection[] = [
     title: "Fiction",
     books: [
       {
-        title: "The Midnight Library",
-        author: "Matt Haig",
-        isbn: "9780525559474",
-        description: "A beautiful reminder that every life contains infinite possibilities and second chances."
+        title: "The Covenant of Water",
+        author: "Abraham Verghese",
+        isbn: "9780802162182",
+        description: "A beautiful narration of how the lives of families intersect across generations."
       },
       {
         title: "Project Hail Mary",
         author: "Andy Weir",
         isbn: "9780593135204",
-        description: "Science and humor combine perfectly to create an unforgettable space adventure."
-      },
-      {
-        title: "Tomorrow, and Tomorrow, and Tomorrow",
-        author: "Gabrielle Zevin",
-        isbn: "9780593321201",
-        description: "A profound exploration of friendship, creativity, and the games we play in life."
+        description: "Sci-fi adventure that was truly engaging and mind-blowing for its scientific accuracy."
       }
     ]
   },
@@ -46,21 +40,16 @@ export const readingData: ReadingSection[] = [
         description: "Essential reading for understanding what makes great product teams tick."
       },
       {
-        title: "The Lean Startup",
-        author: "Eric Ries",
-        isbn: "9780307887894",
-        description: "Foundational concepts for building products that customers actually want."
-      }
-    ]
-  },
-  {
-    title: "Business Strategy",
-    books: [
+        title: "Continuous Discovery Habits",
+        author: "Teresa Torres",
+        isbn: "9781736633304",
+        description: "A Product Management essential IMO. The book provides actionable and sound advice on scheduling, gathering data and presenting interview analysis and mapping it into a visual diagram that communicates business relevance, prioritization and user pain points cohesively."
+      },
       {
-        title: "Good Strategy Bad Strategy",
-        author: "Richard Rumelt",
-        isbn: "9780307886231",
-        description: "Clear thinking about what strategy actually is and how to develop good ones."
+        title: "Radical Product Thinking",
+        author: "Radhika Dutt",
+        isbn: "9781523093328",
+        description: "I particularly enjoyed Dutt's callout on concepts she calls local maxima and global maxima. She explains how product managers often get stuck in local maxima and short-term thinking, and how to break out of it to achieve global maxima and long term success."
       }
     ]
   }
