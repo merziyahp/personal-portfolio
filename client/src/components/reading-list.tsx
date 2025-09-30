@@ -67,7 +67,7 @@ export function ReadingList({ sections }: ReadingListProps) {
                         <img
                           src={getCoverUrl(book)}
                           alt={`${book.title} cover`}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain bg-gray-100"
                           onError={() => handleImageError(bookKey)}
                         />
                       ) : (
