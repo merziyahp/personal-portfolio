@@ -62,17 +62,17 @@ export function ReadingList({ sections }: ReadingListProps) {
                 
                 return (
                   <Card key={bookIndex} className="bg-white shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div className="aspect-[3/4] relative overflow-hidden rounded-t-lg">
+                    <div className="aspect-[3/4] relative overflow-hidden rounded-t-lg p-4">
                       {!hasImageError ? (
                         <img
                           src={getCoverUrl(book)}
                           alt={`${book.title} cover`}
-                          className="w-full h-full object-contain bg-gray-100"
+                          className="w-full h-full object-contain bg-gray-100 rounded"
                           onError={() => handleImageError(bookKey)}
                         />
                       ) : (
                         // Fallback gradient background
-                        <div className="w-full h-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <div className="w-full h-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center rounded">
                           <div className="text-center p-4">
                             <div className="text-white font-bold text-lg mb-2">{book.title}</div>
                             <div className="text-orange-100 text-sm">{book.author}</div>
