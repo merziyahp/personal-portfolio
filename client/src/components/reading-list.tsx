@@ -30,9 +30,17 @@ export function ReadingList({ sections }: ReadingListProps) {
     return `https://covers.openlibrary.org/b/title/${encodeURIComponent(book.title)}-L.jpg`;
   };
 
-  // Handle image load errors
+  // Handle image load errors and small/blank images
   const handleImageError = (bookKey: string) => {
     setImageErrors(prev => new Set([...prev, bookKey]));
+  };
+
+  const handleImageLoad = (event: React.SyntheticEvent<HTMLImageElement>, bookKey: string) => {
+    const img = event.currentTarget;
+    // Check if image is too small (likely a placeholder) or has minimal content
+    if (img.naturalWidth < 50 || img.naturalHeight < 50) {
+      handleImageError(bookKey);
+    }
   };
 
   // Create a unique key for each book
@@ -69,6 +77,7 @@ export function ReadingList({ sections }: ReadingListProps) {
                           alt={`${book.title} cover`}
                           className="w-full h-full object-contain rounded"
                           onError={() => handleImageError(bookKey)}
+                          onLoad={(e) => handleImageLoad(e, bookKey)}
                         />
                       ) : (
                         // Fallback book cover design
