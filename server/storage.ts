@@ -36,11 +36,11 @@ export class MemStorage implements IStorage {
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions. <p>I work with startups and growing teams, connecting the dots between business and tech to get valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen.",
+          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions. I work with startups and growing teams, connecting the dots between business and tech to get valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen.",
           principles: [
             {
               title: "Get clear on the why",
-              description: "Every project starts with understanding the problem we're solving and its business impact."
+              description: "Every project starts with understanding the problem we're solving, who we're solving it for, and its business impact."
             },
             {
               title: "Validate the problem and the user",
@@ -52,7 +52,7 @@ export class MemStorage implements IStorage {
             },
             {
               title: "Be kind. Be transparent. Communicate",
-              description: "Collaboration is key, and I lead with empathy and clarity to foster trust and teamwork."
+              description: "Collaboration is key; I build trust and teamwork through empathy and clarity on team goals."
             }
           ]
         }
@@ -64,7 +64,7 @@ export class MemStorage implements IStorage {
             {
               value: "$85M",
               title: "Funding Secured",
-              description: "Enabled startups to secure $70M and $15M in funding through user insights and strategic product decisions"
+              description: "Enabled startups to $85M in funding through user insights and strategic product decisions"
             },
             {
               value: "6+",
@@ -88,6 +88,7 @@ export class MemStorage implements IStorage {
               skills: [
                 "Cross-functional Leadership",
                 "Product Vision & Strategy",
+                "Product Discovery",
                 "Strategic Roadmaps",
                 "Stakeholder Management",
                 "Agile Methodologies",
@@ -131,8 +132,8 @@ export class MemStorage implements IStorage {
               description: "Designed and built the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
               achievements: [
                 "500+ sign-ups in initial launch phase",
-                "Successful pivot to professional market segment",
-                "Built dedicated platform for artist portfolios"
+                "2x-ed revenue per use by successfully pivoting to a professional market segment",
+                "Defined activation and engagement KPIs for the product post-launch"
               ],
               tags: ["Market Research", "MVP Development", "Two-sided Marketplace"]
             }
@@ -154,8 +155,8 @@ export class MemStorage implements IStorage {
               icon: "mountain"
             },
             {
-              title: "Fitness",
-              description: "Maintaining wellness through structured workout plans",
+              title: "Side Projects",
+              description: "Passion projects to build PM prowess while experimenting with different AI tools",
               icon: "dumbbell"
             },
             {
