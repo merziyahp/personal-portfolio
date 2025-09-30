@@ -67,15 +67,15 @@ export function ReadingList({ sections }: ReadingListProps) {
                         <img
                           src={getCoverUrl(book)}
                           alt={`${book.title} cover`}
-                          className="w-full h-full object-contain bg-gray-100 rounded"
+                          className="w-full h-full object-contain rounded"
                           onError={() => handleImageError(bookKey)}
                         />
                       ) : (
-                        // Fallback gradient background
-                        <div className="w-full h-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center rounded">
-                          <div className="text-center p-4">
-                            <div className="text-white font-bold text-lg mb-2">{book.title}</div>
-                            <div className="text-orange-100 text-sm">{book.author}</div>
+                        // Fallback book cover design
+                        <div className="w-full h-full bg-white border border-gray-200 flex flex-col justify-center items-center p-4 rounded">
+                          <div className="text-center">
+                            <div className="text-gray-900 font-bold text-sm mb-3 leading-tight">{book.title}</div>
+                            <div className="text-gray-600 text-xs">{book.author}</div>
                           </div>
                         </div>
                       )}
