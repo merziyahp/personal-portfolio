@@ -36,11 +36,11 @@ export class MemStorage implements IStorage {
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. I've built and launched enterprise software, delivered 6+ MVPs to validate product-market fit, and advised founders in refining their visions. I work with startups and growing teams, connecting the dots between business and tech to get valuable products to market. I care about outcomes and not afraid to get in the weeds to make it happen.",
+          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. I enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
           principles: [
             {
               title: "Get clear on the why",
-              description: "Every project starts with understanding the problem we're solving, who we're solving it for, and its business impact."
+              description: "Every project starts with understanding the problem we're solving, who we are solving it for, and its business impact."
             },
             {
               title: "Validate the problem and the user",
@@ -52,7 +52,7 @@ export class MemStorage implements IStorage {
             },
             {
               title: "Be kind. Be transparent. Communicate",
-              description: "Collaboration is key; I build trust and teamwork through empathy and clarity on team goals."
+              description: "Collaboration is key; I foster trust and teamwork through empathy and clarity on team goals."
             }
           ]
         }
@@ -64,7 +64,7 @@ export class MemStorage implements IStorage {
             {
               value: "$85M",
               title: "Funding Secured",
-              description: "Enabled startups to $85M in funding through user insights and strategic product decisions"
+              description: "Enabled $85M in funding for startups through user insights and strategic product decisions"
             },
             {
               value: "6+",
@@ -146,17 +146,17 @@ export class MemStorage implements IStorage {
           items: [
             {
               title: "Reading",
-              description: "Currently exploring AI fundamentals and business strategy books",
+              description: "Fictional and Non-Fictional reads on the shelf",
               icon: "book"
             },
             {
-              title: "Hiking",
-              description: "Recent adventures in New Jersey's beautiful trail systems",
+              title: "Adventures",
+              description: "Recent adventures on New Jersey's beautiful trail systems",
               icon: "mountain"
             },
             {
               title: "Side Projects",
-              description: "Passion projects to build PM prowess while experimenting with different AI tools",
+              description: "Passion projects to strengthen PM prowess and experiment with AI tools",
               icon: "dumbbell"
             },
             {
