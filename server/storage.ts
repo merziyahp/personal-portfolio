@@ -139,7 +139,7 @@ export class MemStorage implements IStorage {
             },
             {
               title: "TwentyEight Health: A telehealth platform making healthcare accessible for women",
-              description: "Through lean prioritization, delivered MVP in 3 months, incorporating patient onboarding, payment, and scheduling, to improve patient outcomes. ",
+              description: "Through lean prioritization, delivered MVP in 3 months, incorporating patient onboarding, payment, and scheduling, to improve patient outcomes.",
               achievements: [
                 "Secured $10M+ in funding",
                 "Developed a minimum viable product (MVP) that validated the market need",

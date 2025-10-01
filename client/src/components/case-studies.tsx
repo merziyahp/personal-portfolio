@@ -13,6 +13,11 @@ interface CaseStudiesProps {
 }
 
 export function CaseStudies({ studies }: CaseStudiesProps) {
+  // Safety check for undefined studies
+  if (!studies || !Array.isArray(studies)) {
+    return null;
+  }
+
   return (
     <section id="case-studies" className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +45,7 @@ export function CaseStudies({ studies }: CaseStudiesProps) {
                   ))}
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {study.tags.map((tag, tagIndex) => (
+                  {(study.tags || []).map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
                       className="bg-orange-500/10 text-orange-600 px-2 py-1 rounded text-xs"
