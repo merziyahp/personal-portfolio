@@ -49,7 +49,28 @@ export const readingData: ReadingSection[] = [
         title: "Radical Product Thinking",
         author: "Radhika Dutt",
         isbn: "9781523093328",
-        description: "I particularly enjoyed Dutt's callout on concepts she calls local maxima and global maxima. She explains how product managers often get stuck in local maxima and short-term thinking, and how to break out of it to achieve global maxima and long term success."
+        description: "I particularly enjoyed Dutt's callout on concepts she calls local maxima and global maxima. She explains how product managers often get stuck in local maxima and short-term thinking, and how to break out of it to achieve global maxima and long-term success."
+      }
+    ]
+  },  
+  {
+    title: "Non-Fiction",
+    books: [
+      {  
+        title: "Connection Cure - The Prescriptive Power of Movement, Nature, Art, Service, and Belonging",
+        author: "Julia Hotz",
+        isbn: "9781035423088",
+        description: "An informational read about the power and presence of social prescribing solutions"
+      },
+      {
+        title: "In Emergency, Break Glass - What Nietzsche Can Teach Us about Joyful Living in a Tech-Saturated World",
+        author: "Nate Anderson",
+        isbn: "9781324004806",
+      },
+      {
+        title: "Hidden Potential - The Science of Achieving Greater Things",
+        author: "Adam Grant",
+        isbn: "9780593653142",
       }
     ]
   }
