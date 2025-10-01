@@ -36,7 +36,7 @@ export class MemStorage implements IStorage {
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. /n/nI enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
+          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. \n\nI enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
           principles: [
             {
               title: "Get clear on the why",
@@ -145,6 +145,7 @@ export class MemStorage implements IStorage {
                 "Developed a minimum viable product (MVP) that validated the market need",
                 "Strong project management, engineering collaboration, and stakeholder communication to ensure on-time delivery"
               ],
+              tags: ["Lean Prioritization", "Market Validation", "Healthcare"]
             }
           ]
         }
