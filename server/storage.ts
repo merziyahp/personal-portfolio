@@ -36,7 +36,7 @@ export class MemStorage implements IStorage {
       {
         section: "about",
         content: {
-          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. I enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
+          description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. /n/nI enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
           principles: [
             {
               title: "Get clear on the why",
@@ -118,24 +118,33 @@ export class MemStorage implements IStorage {
         content: {
           studies: [
             {
-              title: "GameChanger: Building a Web Platform for Youth Sports",
-              description: "Led development of a web platform for youth sports management, delivering the first version in 3 months during critical Spring recruitment season.",
+              title: "GameChanger: Solving user churn by prioritizing key user pain points",
+              description: "Led web platform development for a mobile-first youth sports management app, with a sharp focus on solving mobile pain points of data entry while ensuring a seamless experience between web and mobile apps.",
               achievements: [
                 "Web app usage doubled within the first year",
                 "Support tickets reduced by 30%",
-                "Foundation for video streaming capabilities"
+                "Laid the foundation for video streaming capabilities for paying customers"
               ],
               tags: ["User Research", "Cross-functional Leadership", "Agile Development"]
             },
             {
-              title: "Vault Beauty: Beauty Professional Marketplace",
-              description: "Designed and built the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
+              title: "VaultBeauty: A marketplace for beautician services",
+              description: "Defined the roadmap and delivered the first version of a native iOS app connecting clients with trusted beauty professionals in a two-sided marketplace.",
               achievements: [
                 "500+ sign-ups in initial launch phase",
-                "2x-ed revenue per use by successfully pivoting to a professional market segment",
+                "2x-ed revenue per user by successfully pivoting to an upmarket segment",
                 "Defined activation and engagement KPIs for the product post-launch"
               ],
               tags: ["Market Research", "MVP Development", "Two-sided Marketplace"]
+            },
+            {
+              title: "TwentyEight Health: A telehealth platform making healthcare accessible for women",
+              description: "Through lean prioritization, delivered MVP in 3 months, incorporating patient onboarding, payment, and scheduling, to improve patient outcomes. ",
+              achievements: [
+                "Secured $10M+ in funding",
+                "Developed a minimum viable product (MVP) that validated the market need",
+                "Strong project management, engineering collaboration, and stakeholder communication to ensure on-time delivery"
+              ],
             }
           ]
         }
