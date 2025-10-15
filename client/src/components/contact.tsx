@@ -6,48 +6,45 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 
 export function Contact() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: typeof formData) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon."
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       });
-      setFormData({ name: "", email: "", message: "" });
-    },
-    onError: () => {
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon."
+        });
+        form.reset();
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    contactMutation.mutate(formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
   };
 
   return (
@@ -90,8 +87,6 @@ export function Contact() {
                   <Input
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="focus:ring-orange-500 focus:border-orange-500"
                   />
@@ -102,8 +97,6 @@ export function Contact() {
                     id="email"
                     name="email"
                     type="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="focus:ring-orange-500 focus:border-orange-500"
                   />
@@ -114,8 +107,6 @@ export function Contact() {
                     id="message"
                     name="message"
                     rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     className="focus:ring-orange-500 focus:border-orange-500"
                   />
@@ -123,9 +114,9 @@ export function Contact() {
                 <Button 
                   type="submit" 
                   className="w-full bg-orange-500 hover:bg-orange-600"
-                  disabled={contactMutation.isPending}
+                  disabled={isSubmitting}
                 >
-                  {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>
