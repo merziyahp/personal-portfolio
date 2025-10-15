@@ -102,4 +102,12 @@
   "optionalDependencies": {
     "bufferutil": "^4.0.8"
   }
+  "scripts": {
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "tsc",                    // (leave for local full build if you want)
+    "build:server": "tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production node server/dist/index.js",
+    "check": "tsc",
+    "db:push": "drizzle-kit push"
+  }
 }
