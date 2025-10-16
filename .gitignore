@@ -1,5 +1,10 @@
 node_modules
 dist
+.env
+
+# Compiled JavaScript files from TypeScript/JSX
+client/src/**/*.js
+!client/src/**/*.config.js
 .DS_Store
 server/public
 vite.config.ts.*

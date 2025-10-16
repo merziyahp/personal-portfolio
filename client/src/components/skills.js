@@ -1,4 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-export function Skills({ categories }) {
-    return (_jsx("section", { className: "py-16 bg-white", children: _jsxs("div", { className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8", children: [_jsx("h2", { className: "text-3xl font-bold text-center mb-12 text-gray-900", children: "Skills & Expertise" }), _jsx("div", { className: "space-y-8", children: categories.map((category, index) => (_jsxs("div", { children: [_jsx("h3", { className: "text-lg font-semibold mb-4 text-gray-800", children: category.title }), _jsx("div", { className: "flex flex-wrap gap-2", children: category.skills.map((skill, skillIndex) => (_jsx("span", { className: index === 0 ? "skill-tag" : "tool-tag", children: skill }, skillIndex))) })] }, index))) })] }) }));
-}
