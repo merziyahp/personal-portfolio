@@ -1,0 +1,5 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { ButterflyIcon } from "./icons/butterfly";
+export function NewHero() {
+    return (_jsx("section", { className: "pt-24 pb-16 bg-gradient-to-br from-orange-500 to-orange-600 text-white min-h-screen flex items-center", children: _jsxs("div", { className: "max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full", children: [_jsxs("div", { className: "max-w-4xl", children: [_jsxs("h1", { className: "text-5xl md:text-7xl font-bold mb-8 leading-tight", children: ["Curious. Pragmatic.", _jsx("br", {}), "Adventurous."] }), _jsxs("div", { className: "space-y-6 text-xl md:text-2xl text-orange-100", children: [_jsx("p", { children: "Curious enough to explore the unknown." }), _jsx("p", { children: "Pragmatic enough to ship it." }), _jsx("p", { children: "Adventurous enough to try again." })] })] }), _jsxs("div", { className: "absolute bottom-20 right-20 opacity-60 hidden lg:block", children: [_jsx(ButterflyIcon, { className: "w-16 h-16 text-white" }), _jsx("div", { className: "absolute -top-4 -left-8 w-32 h-1 border-t-2 border-dashed border-white opacity-40" })] })] }) }));
+}
