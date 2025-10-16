@@ -1,11 +1,24 @@
+# Node modules and build artifacts
 node_modules
 dist
-.env
+client/dist
 
-# Compiled JavaScript files from TypeScript/JSX
-client/src/**/*.js
-!client/src/**/*.config.js
+# Environment and lock files
+.env
+.env.*
+!.env.example
+package-lock.json
+
+# Replit-specific files
+# (keep these tracked so your Replit environment works)
+!replit.nix
+!.replit
+
+# OS / editor cruft
 .DS_Store
-server/public
-vite.config.ts.*
+Thumbs.db
 *.tar.gz
+
+# Legacy or archived content
+server/
+archive/
