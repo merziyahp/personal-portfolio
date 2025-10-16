@@ -29,4 +29,8 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "../dist"),
     emptyOutDir: true,
   },
+  server: {
+    host: "0.0.0.0",
+    allowedHosts: [".replit.dev"],
+  },
 });
