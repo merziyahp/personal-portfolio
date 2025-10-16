@@ -185,7 +185,8 @@ export default function Home() {
             description: "How curiosity and ChatGPT got me through HuggingFace's AI Agent Course",
             publishedAt: "2025-08-19",
             url: "https://open.substack.com/pub/merziyahpoonawala/p/i-hadnt-coded-in-a-decade-then-i?r=5iuj7j&utm_campaign=post&utm_medium=web",
-            tags: ["Product Management", "VibeCoding", "Playing with AI"]
+            tags: ["Product Management", "VibeCoding", "Playing with AI"],
+            readTime: "5 min",
           }
         ]}
       />
