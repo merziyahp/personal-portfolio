@@ -3,8 +3,10 @@ import { Download, Mail } from "lucide-react";
 
 export function ProfileSection() {
   const handleDownloadResume = () => {
-    // In a real implementation, this would download the actual resume
-    window.open('/api/resume', '_blank');
+   const link = document.createElement('a');
+    link.href = '/Resume.pdf';
+    link.download = 'Merziyah_Poonawala_Resume.pdf';
+    link.click();
   };
 
   const scrollToContact = () => {

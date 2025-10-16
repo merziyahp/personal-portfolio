@@ -54,7 +54,7 @@ export function Navigation() {
               Contact
             </button>
             <a
-                href="/Merziyah_Poonawala_Resume.pdf"
+                href="/Resume.pdf"
                 download="Merziyah_Poonawala_Resume.pdf"
                 className="text-gray-600 hover:text-orange-500 transition-colors"
               >
