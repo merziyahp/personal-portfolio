@@ -53,6 +53,13 @@ export function Navigation() {
             >
               Contact
             </button>
+            <a
+                href="/Merziyah_Poonawala_Resume.pdf"
+                download="Merziyah_Poonawala_Resume.pdf"
+                className="text-gray-600 hover:text-orange-500 transition-colors"
+              >
+                Resume
+              </a>
           </div>
           <button className="md:hidden text-gray-600">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
