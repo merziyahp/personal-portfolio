@@ -20,7 +20,7 @@ export default function Home() {
       bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces. Experienced in transforming ambiguity into execution and operating in 0-to-1 solution spaces."
     },
     about: {
-      description: "I'm a product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. With a focus on 0-1 product development, I have advised founders on the right user segments and the right problem, and delivered 6+ MVPs to validate product-market fit. \n\nI enjoy working with startups and growing teams, mapping complex user journeys, and connecting the dots between business and tech to get products to market. I care about outcomes and am not afraid to get in the weeds to make it happen.",
+      description: "Merziyah is a 0-1 product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. Partnering with business leaders and technical teams she has led early-stage and mid sized companies hone in on key user problems, define lean roadmaps, and excuted on those roadmaps to deliver 6+ MVPs in tight timelines across healthcare, government, youth sports, and marketplaces. \n\nShe is particularly passionate about working with startups and growing teams to map complex user journeys, define lean solutions, and bridge business and tech teams to get products to market. She cares about outcomes and am not afraid to get in the weeds to make it happen.",
       principles: [
         {
           title: "Get clear on the why",
