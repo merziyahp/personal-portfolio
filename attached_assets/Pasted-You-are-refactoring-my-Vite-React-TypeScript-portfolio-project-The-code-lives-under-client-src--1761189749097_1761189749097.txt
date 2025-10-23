@@ -1,0 +1,84 @@
+You are refactoring my Vite + React + TypeScript portfolio project.
+The code lives under client/src, with @ aliasing that path.
+Your goal is to tackle the first two items of my data sanity checklist:
+
+Goals
+
+Move all domain content into client/src/data/<domain> folders with schemas and index.ts.
+
+Ensure all data files contain content only (no layout or component fields like className, icon, or gridSpan). Create a mapping layer in each feature to translate data → props where needed.
+
+Instructions
+
+Identify where data (arrays, objects, hardcoded text for projects, reading list, site info, nav links) currently lives inside pages/ or components/.
+
+Extract it into client/src/data/ using the structure below:
+
+client/src/data/
+  site/{schema.ts,index.ts}
+  nav/{schema.ts,index.ts}
+  projects/{schema.ts,index.ts}
+  reading/{schema.ts,index.ts}
+
+
+For each domain:
+
+Create a schema.ts using zod for validation and typed exports.
+
+Parse the raw data array/object in index.ts using the schema.
+
+Import these in their respective pages/components to replace inline data.
+
+Keep the app rendering identical.
+
+Replace any presentational props in data (like icons or classes) with a small mapping layer inside the feature, e.g.:
+
+// client/src/features/work/mapProjectCard.ts
+import type { Project } from "@/data/projects/schema";
+
+export const toProjectCardProps = (p: Project) => ({
+  title: p.title,
+  subtitle: p.role ?? "",
+  href: p.url,
+  imageSrc: p.image,
+  badges: p.tags,
+});
+
+
+Add a top-level barrel export:
+
+// client/src/data/index.ts
+export * as site from "./site";
+export * as nav from "./nav";
+export * as projects from "./projects";
+export * as reading from "./reading";
+
+
+Deliverables
+
+Show me code diffs for:
+
+New and modified files under client/src/data/
+
+Updated imports in pages/components
+
+Any added mapping layers
+
+Summarize what was moved from each page into data/.
+
+Acceptance Criteria
+
+All domain content lives under client/src/data/<domain>/.
+
+Data validated via Zod schemas.
+
+Pages/components import from @/data/....
+
+TypeScript builds cleanly with no any.
+
+No presentational props remain in data.
+
+Important
+Only show and explain the code changes (diffs).
+Do not rewrite unrelated files.
+Keep comments short and functional.
