@@ -3,6 +3,12 @@ node_modules
 dist
 client/dist
 
+# Compiled JavaScript files (we use TypeScript)
+*.js
+!*.config.js
+!vite.config.js
+!postcss.config.js
+
 # Environment and lock files
 .env
 .env.*
