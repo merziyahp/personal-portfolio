@@ -23,7 +23,7 @@ export function About({ description, principles }: AboutProps) {
           )}
           
           <div className="bg-orange-50/50 p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4 text-orange-600">My Product Principles:</h3>
+            <h3 className="text-xl font-semibold mb-4 text-orange-600">What I'm known for:</h3>
             <ul className="space-y-3 text-gray-700">
               {principles.map((principle, index) => (
                 <li key={index} className="flex items-start">
