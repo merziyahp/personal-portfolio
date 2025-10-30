@@ -6,23 +6,27 @@ export const portfolioContent = {
     bio: "10+ years of independently owning and delivering product initiatives across healthcare, fintech, and marketplaces. Experienced in transforming ambiguity into execution and operating in 0-to-1 solution spaces."
   },
   about: {
-    description: "Merziyah is a 0-1 product manager who thrives on untangling complex problems, finding clarity in ambiguity, and translating user insights into impactful products. Partnering with business leaders and technical teams she has led early-stage and mid sized companies hone in on key user problems, define lean roadmaps, and excuted on those roadmaps to deliver 6+ MVPs in tight timelines across healthcare, government, youth sports, and marketplaces. \n\nShe is particularly passionate about working with startups and growing teams to map complex user journeys, define lean solutions, and bridge business and tech teams to get products to market. She cares about outcomes and is not afraid to get in the weeds to make it happen.",
+    description: "Merziyah Poonawala is a product manager who loves turning complex ideas into products that make work simpler and teams more aligned. Over the past decade, she’s helped startups and mission-driven teams across healthcare, civic-tech, and marketplaces take products from concept to launch — defining what to build, why it matters, and how to get it shipped. Known for her 0→1 execution and knack for scoping lean solutions under tight timelines, she creates clarity where there’s ambiguity and helps teams deliver with confidence. An AI-forward thinker, she enjoys exploring how emerging tools can enhance product work and often shares her learnings through talks, community sessions, and small experimental projects.",
     principles: [
       {
-        title: "Get clear on the why",
-        description: "Every project starts with understanding the problem we're solving, who we are solving it for, and its business impact."
+        title: "Clarity from Ambiguity",
+        description: "I bring structure to messy problems. I’m at my best when things are undefined — finding the signal, creating focus, and helping teams move forward with confidence."
       },
       {
-        title: "Validate the problem and the user",
-        description: "I prioritize research to ensure we're solving the right problem for the right audience."
+        title: "Workflow & Systems Thinking",
+        description: "I connect people, process, and product. I see how the moving parts fit together and design simple, functional systems that make work flow naturally."
       },
       {
-        title: "Build lean and ship early",
-        description: "Incremental releases drive user feedback and product refinement."
+        title: "Pragmatic Execution",
+        description: "I keep things lean and moving. I scope what matters, deliver fast, learn quickly, and make sure progress never stalls — even with tight timelines."
       },
       {
-        title: "Be kind. Be transparent. Communicate",
-        description: "Collaboration is key; I foster trust and teamwork through empathy and clarity on team goals."
+        title: "Trusted Ownership",
+        description: "When I take something on, people stop worrying about it. I’m reliable, proactive, and comfortable leading through uncertainty — from defining goals to seeing the work through to delivery."
+      },
+      {
+        title: "Team Alignment & Calm",
+        description: "I make fast-moving work feel manageable. I’m steady under pressure, clear in communication, and good at keeping teams focused on what actually matters."
       }
     ]
   },
