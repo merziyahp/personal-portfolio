@@ -10,7 +10,7 @@ export const portfolioContent = {
     principles: [
       {
         title: "Clarity from Ambiguity",
-        description: "I bring structure to messy problems. I’m at my best when things are undefined — finding the signal, creating focus, and helping teams move forward with confidence."
+        description: "I bring structure to complex problems. I clarify what success looks like, then create the focus and definition around how to get there — aligning teams and turning broad goals into tangible product plans."
       },
       {
         title: "Workflow & Systems Thinking",
