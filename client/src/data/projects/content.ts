@@ -7,7 +7,7 @@ export const projectsContent = {
       id: "receipt-parser",
       title: "Receipt Parser",
       tagline: "Fast AI MVP for Personal Expense Tracking",
-      tags: ["AI/ML", "MVP", "No-code"]
+      tags: ["AI/ML", "MVP", "No-code"],
       media: [
         {
           type: "image",
