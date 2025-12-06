@@ -5,7 +5,7 @@ import yaml from 'js-yaml';
 import type { Project } from './schema';
 
 // Import markdown files from public directory
-const projectFiles = import.meta.glob('/projects/*.md', {
+const projectFiles = import.meta.glob('/public/projects/*.md', {
   as: 'raw',
   eager: true
 });
