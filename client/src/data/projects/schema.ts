@@ -9,9 +9,11 @@ export const mediaItemSchema = z.object({
 });
 
 export const contentBlockSchema = z.object({
-  type: z.enum(["heading", "paragraph", "list", "quote"]),
+  type: z.enum(["heading", "paragraph", "list", "quote", "image"]),
   level: z.number().optional(),
-  content: z.union([z.string(), z.array(z.string())]),
+  content: z.union([z.string(), z.array(z.string())]).optional(),
+  url: z.string().optional(),
+  alt: z.string().optional(),
 });
 
 export const projectSchema = z.object({
