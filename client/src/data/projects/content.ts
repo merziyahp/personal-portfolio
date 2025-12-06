@@ -3,9 +3,10 @@ import type { Project } from './schema';
 
 // This function would typically run at build time or server-side
 // For a static site, you'd use Vite's import.meta.glob
-const projectFiles = import.meta.glob('/public/projects/*.md', {
-  query: '?raw',
-  import: 'default',
+
+// Import markdown files from public directory
+const projectFiles = import.meta.glob('/projects/*.md', {
+  as: 'raw',
   eager: true
 });
 
@@ -20,7 +21,6 @@ function parseMarkdownToProject(filename: string, markdown: string): Project {
     title: frontmatter.title,
     tagline: frontmatter.tagline,
     tags: frontmatter.tags || [],
-    date: frontmatter.date || new Date().toISOString(),
     media: frontmatter.media || [],
     content: contentBlocks,
     demoUrl: frontmatter.demoUrl,
