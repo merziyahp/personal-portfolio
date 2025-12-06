@@ -21,11 +21,11 @@ export default function Projects() {
               <Link key={project.id} href={`/projects/${project.id}`}>
                 <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer h-full">
                   {project.media && project.media.length > 0 && project.media[0].type === "image" && (
-                    <div className="w-full h-48 overflow-hidden rounded-t-lg">
+                    <div className="w-full h-48 overflow-hidden rounded-t-lg bg-gray-100 flex items-center justify-center">
                       <img 
                         src={project.media[0].url} 
                         alt={project.media[0].alt || project.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   )}
