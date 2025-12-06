@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,14 +23,14 @@ function renderContentBlock(block: ContentBlock, index: number) {
           {block.content as string}
         </HeadingTag>
       );
-    
+
     case "paragraph":
       return (
         <p key={index} className="mb-4 text-gray-700 leading-relaxed">
           {block.content as string}
         </p>
       );
-    
+
     case "list":
       return (
         <ul key={index} className="list-disc list-inside mb-4 space-y-2 text-gray-700">
@@ -40,14 +39,14 @@ function renderContentBlock(block: ContentBlock, index: number) {
           ))}
         </ul>
       );
-    
+
     case "quote":
       return (
         <blockquote key={index} className="border-l-4 border-orange-500 pl-4 py-2 mb-4 italic text-gray-600 bg-orange-50/30">
           {block.content as string}
         </blockquote>
       );
-    
+
     default:
       return null;
   }
@@ -68,7 +67,7 @@ function renderMedia(media: MediaItem, index: number) {
       </div>
     );
   }
-  
+
   if (media.type === "video") {
     return (
       <div key={index} className="mb-4">
@@ -85,7 +84,7 @@ function renderMedia(media: MediaItem, index: number) {
       </div>
     );
   }
-  
+
   return null;
 }
 
@@ -95,7 +94,7 @@ export function SideProjects({ title, description, projects }: SideProjectsProps
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">{title}</h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">{description}</p>
-        
+
         <div className="space-y-12">
           {projects.map((project) => (
             <Card key={project.id} className="bg-white shadow-lg overflow-hidden">
@@ -114,9 +113,8 @@ export function SideProjects({ title, description, projects }: SideProjectsProps
                       </span>
                     ))}
                   </div>
-                  <p className="text-orange-100 text-sm">{project.date}</p>
                 </div>
-                
+
                 {/* Project Content */}
                 <div className="p-8">
                   {/* Media Gallery */}
@@ -129,12 +127,12 @@ export function SideProjects({ title, description, projects }: SideProjectsProps
                       {project.media.map((media, index) => renderMedia(media, index))}
                     </div>
                   )}
-                  
+
                   {/* Content Blocks */}
                   <div className="prose prose-lg max-w-none">
                     {project.content.map((block, index) => renderContentBlock(block, index))}
                   </div>
-                  
+
                   {/* Action Buttons */}
                   {(project.demoUrl || project.codeUrl) && (
                     <div className="flex gap-4 mt-8 pt-6 border-t">
