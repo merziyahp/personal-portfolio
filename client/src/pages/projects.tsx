@@ -44,7 +44,6 @@ export default function Projects() {
                         </span>
                       ))}
                     </div>
-                    <p className="text-gray-600 text-sm mb-4">{project.date}</p>
                     <div className="flex items-center text-orange-600 font-semibold">
                       View Case Study
                       <ArrowRight className="w-4 h-4 ml-2" />

@@ -122,7 +122,7 @@ export default function ProjectDetail() {
         <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-8 rounded-t-lg">
           <h1 className="text-4xl font-bold mb-3">{project.title}</h1>
           <p className="text-orange-100 text-xl mb-4">{project.tagline}</p>
-          <div className="flex flex-wrap gap-2 mb-3">
+          <div className="flex flex-wrap gap-2">
             {project.tags.map((tag, index) => (
               <span 
                 key={index}
@@ -132,7 +132,6 @@ export default function ProjectDetail() {
               </span>
             ))}
           </div>
-          <p className="text-orange-100">{project.date}</p>
         </div>
         
         {/* Project Content */}
