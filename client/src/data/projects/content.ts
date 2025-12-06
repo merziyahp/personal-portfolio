@@ -17,7 +17,7 @@ function parseMarkdownToProject(filename: string, markdown: string): Project {
   const contentBlocks = parseMarkdownContent(content);
 
   return {
-    id: frontmatter.id,
+    id: frontmatter.id || filename.replace('.md', ''),
     title: frontmatter.title,
     tagline: frontmatter.tagline,
     tags: frontmatter.tags || [],
