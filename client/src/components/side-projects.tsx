@@ -128,17 +128,6 @@ export function SideProjects({ title, description, projects }: SideProjectsProps
 
                 {/* Project Content */}
                 <div className="p-8">
-                  {/* Media Gallery */}
-                  {project.media && project.media.length > 0 && (
-                    <div className={`grid gap-4 mb-6 ${
-                      project.media.length === 1 ? 'grid-cols-1' : 
-                      project.media.length === 2 ? 'grid-cols-2' : 
-                      'grid-cols-3'
-                    }`}>
-                      {project.media.map((media, index) => renderMedia(media, index))}
-                    </div>
-                  )}
-
                   {/* Content Blocks */}
                   <div className="prose prose-lg max-w-none">
                     {project.content.map((block, index) => renderContentBlock(block, index))}
