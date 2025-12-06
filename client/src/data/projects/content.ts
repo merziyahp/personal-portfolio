@@ -12,31 +12,28 @@ const projectFiles = import.meta.glob('/public/projects/*.md', {
 
 function parseMarkdownToProject(filename: string, markdown: string): Project {
   let frontmatter: any = {};
-  let contentStart = 0;
-
-  // Extract frontmatter
-  const md = new MarkdownIt().use(frontMatterPlugin, (fm: string) => {
-    frontmatter = yaml.load(fm) || {};
-  });
-
-  // Parse to extract frontmatter
-  md.render(markdown);
-
-  // Find where content starts (after frontmatter)
+  
+  // Extract frontmatter using regex
   const fmMatch = markdown.match(/^---\n([\s\S]*?)\n---\n/);
   if (fmMatch) {
-    contentStart = fmMatch[0].length;
+    try {
+      frontmatter = yaml.load(fmMatch[1]) || {};
+    } catch (e) {
+      console.error('Error parsing YAML frontmatter:', e);
+    }
   }
 
-  const content = markdown.substring(contentStart);
+  // Get content after frontmatter
+  const contentStart = fmMatch ? fmMatch[0].length : 0;
+  const content = markdown.substring(contentStart).trim();
 
   // Parse markdown content into structured blocks
   const contentBlocks = parseMarkdownContent(content);
 
   return {
     id: frontmatter.id || filename.replace('.md', ''),
-    title: frontmatter.title,
-    tagline: frontmatter.tagline,
+    title: frontmatter.title || 'Untitled',
+    tagline: frontmatter.tagline || '',
     tags: frontmatter.tags || [],
     media: frontmatter.media || [],
     content: contentBlocks,
