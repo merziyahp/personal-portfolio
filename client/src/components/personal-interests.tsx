@@ -34,7 +34,8 @@ export function PersonalInterests({ items }: PersonalInterestsProps) {
     <section id="personal" className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Personal Interests</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="flex justify-center">
+          <div className="w-full max-w-sm">
           {items.map((item, index) => {
             const IconComponent = iconMap[item.icon as keyof typeof iconMap];
             const isReadingCard = item.title.toLowerCase() === 'reading';
@@ -76,6 +77,7 @@ export function PersonalInterests({ items }: PersonalInterestsProps) {
               </div>
             );
           })}
+          </div>
         </div>
       </div>
     </section>

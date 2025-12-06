@@ -118,23 +118,8 @@ export const portfolioContent = {
     items: [
       {
         title: "Reading",
-        description: "Fictional and Non-Fictional reads on the shelf",
+        description: "Exploring ideas through books and articles",
         icon: "book"
-      },
-      {
-        title: "Adventures",
-        description: "Recent adventures on New Jersey's beautiful trail systems",
-        icon: "mountain"
-      },
-      {
-        title: "Side Projects",
-        description: "Passion projects to strengthen PM prowess and experiment with AI tools",
-        icon: "dumbbell"
-      },
-      {
-        title: "Learning",
-        description: "Recently completed AI and prompt engineering certifications",
-        icon: "graduation-cap"
       }
     ]
   }
