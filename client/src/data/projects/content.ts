@@ -13,8 +13,11 @@ const projectFiles = import.meta.glob('/public/projects/*.md', {
 function parseMarkdownToProject(filename: string, markdown: string): Project {
   let frontmatter: any = {};
   
-  // Extract frontmatter using regex - match both \n and \r\n line endings
-  const fmMatch = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
+  // Normalize line endings first
+  const normalizedMarkdown = markdown.replace(/\r\n/g, '\n');
+  
+  // Extract frontmatter - match from start of file
+  const fmMatch = normalizedMarkdown.match(/^---\n([\s\S]*?)\n---\n/);
   if (fmMatch) {
     try {
       const yamlContent = fmMatch[1];
@@ -23,14 +26,16 @@ function parseMarkdownToProject(filename: string, markdown: string): Project {
       console.log('Parsed frontmatter:', frontmatter); // Debug log
     } catch (e) {
       console.error('Error parsing YAML frontmatter:', e);
+      console.error('YAML content that failed:', fmMatch[1]);
     }
   } else {
     console.warn('No frontmatter found in:', filename);
+    console.log('First 200 chars:', normalizedMarkdown.substring(0, 200));
   }
 
   // Get content after frontmatter
   const contentStart = fmMatch ? fmMatch[0].length : 0;
-  const content = markdown.substring(contentStart).trim();
+  const content = normalizedMarkdown.substring(contentStart).trim();
 
   // Parse markdown content into structured blocks
   const contentBlocks = parseMarkdownContent(content);
