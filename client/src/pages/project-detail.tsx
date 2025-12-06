@@ -137,7 +137,7 @@ export default function ProjectDetail() {
         
         {/* Project Content */}
         <div className="bg-white p-8 rounded-b-lg shadow-lg">
-          {/* Media Gallery */}
+          {/* Media Gallery - Only show if media exists */}
           {project.media && project.media.length > 0 && (
             <div className={`grid gap-4 mb-8 ${
               project.media.length === 1 ? 'grid-cols-1' : 
