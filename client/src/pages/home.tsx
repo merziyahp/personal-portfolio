@@ -7,11 +7,13 @@ import { CareerHighlights } from "@/components/career-highlights";
 import { Skills } from "@/components/skills";
 import { CaseStudies } from "@/components/case-studies";
 import { Writing } from "@/components/writing";
+import { SideProjects } from "@/components/side-projects";
 import { PersonalInterests } from "@/components/personal-interests";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { portfolioData } from "@/data/portfolio";
 import { writingData } from "@/data/writing";
+import { projectsData } from "@/data/projects";
 
 export default function Home() {
 
@@ -45,6 +47,12 @@ export default function Home() {
         description={writingData.description}
         substackUrl={writingData.substackUrl}
         featured={writingData.featured}
+      />
+      
+      <SideProjects
+        title={projectsData.title}
+        description={projectsData.description}
+        projects={projectsData.projects}
       />
       
       <PersonalInterests 
