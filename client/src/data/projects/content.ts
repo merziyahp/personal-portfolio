@@ -54,8 +54,18 @@ function parseMarkdownContent(markdown: string) {
   while (i < lines.length) {
     const line = lines[i].trim();
 
+    // Inline images - ![alt](url)
+    const imageMatch = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+    if (imageMatch) {
+      blocks.push({
+        type: 'image',
+        url: imageMatch[2],
+        alt: imageMatch[1] || 'Project image',
+      });
+      i++;
+    }
     // Headings
-    if (line.startsWith('###')) {
+    else if (line.startsWith('###')) {
       blocks.push({
         type: 'heading',
         level: 3,
@@ -106,7 +116,8 @@ function parseMarkdownContent(markdown: string) {
              !lines[i].trim().startsWith('#') &&
              !lines[i].trim().startsWith('>') &&
              !lines[i].trim().startsWith('-') &&
-             !lines[i].trim().startsWith('*')) {
+             !lines[i].trim().startsWith('*') &&
+             !lines[i].trim().startsWith('![')) {
         paragraph += ' ' + lines[i].trim();
         i++;
       }

@@ -44,6 +44,17 @@ function renderContentBlock(block: ContentBlock, index: number) {
         </blockquote>
       );
     
+    case "image":
+      return (
+        <div key={index} className="my-6">
+          <img 
+            src={(block as any).url} 
+            alt={(block as any).alt || "Project image"} 
+            className="w-full rounded-lg shadow-md"
+          />
+        </div>
+      );
+    
     default:
       return null;
   }
