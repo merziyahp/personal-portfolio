@@ -1,8 +1,8 @@
-import matter from 'gray-matter';
-import type { Project } from './schema';
 
-// This function would typically run at build time or server-side
-// For a static site, you'd use Vite's import.meta.glob
+import MarkdownIt from 'markdown-it';
+import frontMatterPlugin from 'markdown-it-front-matter';
+import yaml from 'js-yaml';
+import type { Project } from './schema';
 
 // Import markdown files from public directory
 const projectFiles = import.meta.glob('/projects/*.md', {
@@ -11,7 +11,24 @@ const projectFiles = import.meta.glob('/projects/*.md', {
 });
 
 function parseMarkdownToProject(filename: string, markdown: string): Project {
-  const { data: frontmatter, content } = matter(markdown);
+  let frontmatter: any = {};
+  let contentStart = 0;
+
+  // Extract frontmatter
+  const md = new MarkdownIt().use(frontMatterPlugin, (fm: string) => {
+    frontmatter = yaml.load(fm) || {};
+  });
+
+  // Parse to extract frontmatter
+  md.render(markdown);
+
+  // Find where content starts (after frontmatter)
+  const fmMatch = markdown.match(/^---\n([\s\S]*?)\n---\n/);
+  if (fmMatch) {
+    contentStart = fmMatch[0].length;
+  }
+
+  const content = markdown.substring(contentStart);
 
   // Parse markdown content into structured blocks
   const contentBlocks = parseMarkdownContent(content);

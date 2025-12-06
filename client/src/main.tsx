@@ -1,6 +1,3 @@
-// Import Buffer polyfill FIRST before anything else
-import './buffer-polyfill';
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClientProvider } from "@tanstack/react-query";
