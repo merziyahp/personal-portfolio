@@ -1,10 +1,26 @@
 import { ButterflyIcon } from "./icons/butterfly";
+import { useLocation } from "wouter";
 
 export function Navigation() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const [location, setLocation] = useLocation();
+
+  const handleNavigate = (sectionId: string) => {
+    if (location === '/') {
+      // Already on home page, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      setLocation('/');
+      // Wait for navigation, then scroll
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
   };
 
@@ -12,31 +28,34 @@ export function Navigation() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+          <button 
+            onClick={() => setLocation('/')}
+            className="flex items-center cursor-pointer"
+          >
             <ButterflyIcon className="text-orange-500 w-6 h-6 mr-2" />
             <span className="font-semibold text-lg text-gray-900">Merziyah's Digital Home</span>
-          </div>
+          </button>
           <div className="hidden md:flex space-x-8">
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNavigate('about')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('experience')}
+              onClick={() => handleNavigate('experience')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               Experience
             </button>
             <button 
-              onClick={() => scrollToSection('case-studies')}
+              onClick={() => handleNavigate('case-studies')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               Case Studies
             </button>
             <button 
-              onClick={() => scrollToSection('writing')}
+              onClick={() => handleNavigate('writing')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               Writing
@@ -48,13 +67,13 @@ export function Navigation() {
               Projects
             </a>
             <button 
-              onClick={() => scrollToSection('personal')}
+              onClick={() => handleNavigate('personal')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               Personal
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigate('contact')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
             >
               Contact
