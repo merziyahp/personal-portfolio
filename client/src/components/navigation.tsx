@@ -41,6 +41,12 @@ export function Navigation() {
             >
               Writing
             </button>
+            <a 
+              href="/projects"
+              className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
+            >
+              Projects
+            </a>
             <button 
               onClick={() => scrollToSection('personal')}
               className="text-gray-600 hover:text-orange-500 transition-colors duration-200"
