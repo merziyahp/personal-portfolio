@@ -38,8 +38,8 @@ export function CaseStudies({ studies }: CaseStudiesProps) {
                 <p className="text-gray-600 mb-4">{study.description}</p>
                 <div className="space-y-2 mb-4">
                   {study.achievements.map((achievement, achievementIndex) => (
-                    <div key={achievementIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="text-orange-500 mr-2 h-4 w-4" />
+                    <div key={achievementIndex} className="flex items-start text-sm text-gray-600">
+                      <CheckCircle className="text-orange-500 mr-2 h-4 w-4 flex-shrink-0 mt-0.5" />
                       <span>{achievement}</span>
                     </div>
                   ))}
