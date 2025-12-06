@@ -77,6 +77,8 @@ The resulting MVP is a small PWA receipt scanner that:
 
 In practice, the user can scan, validate, and save a receipt in around five seconds, with most of the work handled by OCR + Gemini.
 
+![Parsed receipt data](/images/projects/receipt-parser-2.jpg)
+
 ## Outcome
 
 The MVP achieved its main goals:
