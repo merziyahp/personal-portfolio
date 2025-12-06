@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
 import type { ContentBlock, MediaItem } from "@/data/projects";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 function renderContentBlock(block: ContentBlock, index: number) {
   switch (block.type) {
@@ -120,7 +122,8 @@ export default function ProjectDetail() {
   
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <Navigation />
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-24">
         {/* Back Button */}
         <Button asChild variant="outline" className="mb-6">
           <Link href="/projects">
@@ -175,6 +178,7 @@ export default function ProjectDetail() {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

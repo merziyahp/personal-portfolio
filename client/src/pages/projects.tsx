@@ -3,11 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { projectsData } from "@/data/projects";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 export default function Projects() {
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="py-16">
+      <Navigation />
+      <section className="py-16 pt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-center mb-4 text-gray-900">
             {projectsData.title}
@@ -55,6 +58,7 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
