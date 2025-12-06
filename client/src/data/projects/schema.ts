@@ -19,7 +19,7 @@ export const projectSchema = z.object({
   title: z.string(),
   tagline: z.string(),
   tags: z.array(z.string()),
-  date: z.string(), // ISO date or readable format
+  date: z.string().optional(), // ISO date or readable format
   hero: mediaItemSchema.optional(), // Main image/video
   media: z.array(mediaItemSchema).max(3), // Additional images/videos
   content: z.array(contentBlockSchema),
