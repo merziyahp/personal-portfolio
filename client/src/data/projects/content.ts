@@ -7,17 +7,16 @@ export const projectsContent = {
       id: "receipt-parser",
       title: "Receipt Parser",
       tagline: "Fast AI MVP for Personal Expense Tracking",
-      tags: ["AI/ML", "MVP", "No-code"],
-      date: "2024",
+      tags: ["AI/ML", "MVP", "No-code"]
       media: [
         {
           type: "image",
           url: "/images/projects/receipt-parser-1.png",
-          alt: "Receipt scanning interface",
+          alt: "App Splash Page",
         },
         {
           type: "image",
-          url: "/images/projects/receipt-parser-2.png",
+          url: "/images/projects/receipt-parser-2.jpg",
           alt: "Parsed receipt data",
         },
       ],
