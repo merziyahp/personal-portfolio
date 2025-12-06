@@ -13,14 +13,19 @@ const projectFiles = import.meta.glob('/public/projects/*.md', {
 function parseMarkdownToProject(filename: string, markdown: string): Project {
   let frontmatter: any = {};
   
-  // Extract frontmatter using regex
-  const fmMatch = markdown.match(/^---\n([\s\S]*?)\n---\n/);
+  // Extract frontmatter using regex - match both \n and \r\n line endings
+  const fmMatch = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
   if (fmMatch) {
     try {
-      frontmatter = yaml.load(fmMatch[1]) || {};
+      const yamlContent = fmMatch[1];
+      console.log('YAML content:', yamlContent); // Debug log
+      frontmatter = yaml.load(yamlContent) || {};
+      console.log('Parsed frontmatter:', frontmatter); // Debug log
     } catch (e) {
       console.error('Error parsing YAML frontmatter:', e);
     }
+  } else {
+    console.warn('No frontmatter found in:', filename);
   }
 
   // Get content after frontmatter
