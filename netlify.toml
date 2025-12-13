@@ -1,12 +1,6 @@
 [build]
   command = "cd client && npm ci && npm run build"   # or: npm install && npm run build
   publish = "client/dist"
-
-# SPA fallback for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
   
 [[redirects]]
 from = "/apply"
@@ -22,3 +16,10 @@ status = 302
 from = "/linkedin"
 to = "/?utm_source=linkedin&utm_medium=social&utm_campaign=portfolio"
 status = 302
+
+# SPA fallback for client-side routing
+# this should go after the above campaign redirects so that it doesn't overwrite those rules
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
