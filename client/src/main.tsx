@@ -5,6 +5,8 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import App from './App';
 import "./index.css";
+import { initSectionViewTracking } from "./analytics/sectionTracking";
+
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -14,3 +16,19 @@ createRoot(document.getElementById("root")!).render(
     </QueryClientProvider>
   </StrictMode>
 );
+
+// Run after React mounts DOM
+queueMicrotask(() => {
+  initSectionViewTracking([
+    "hero",
+    "profile",
+    "about",
+    "career-highlights",
+    "skills",
+    "case-studies",
+    "writing",
+    "side-projects",
+    "personal-interests",
+    "contact",
+  ]);
+});
