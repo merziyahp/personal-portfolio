@@ -16,6 +16,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import { initSectionViewTracking } from "../analytics/sectionTracking";
+import { useEffect } from "react";
+
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   useEffect(() => {
