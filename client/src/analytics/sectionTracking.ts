@@ -18,8 +18,6 @@ export function initSectionViewTracking(sectionIds: string[]) {
       seen.add(id);
 
       window.gtag?.("event", "section_view", { section_id: id });
-      console.log("section_view", id, entry.intersectionRatio);
-
     }
   },
   {
