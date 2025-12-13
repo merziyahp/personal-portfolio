@@ -90,7 +90,17 @@ export default function Home() {
 
       <section id="side-projects" className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-@@ -66,12 +74,14 @@ export default function Home() {
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Side Projects</h2>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Personal experiments in product, AI, and rapid prototyping
+            </p>
+            <Button asChild className="bg-orange-500 hover:bg-orange-600">
+              <Link href="/projects">
+                View All Projects
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
