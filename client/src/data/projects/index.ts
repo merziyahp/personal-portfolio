@@ -2,7 +2,7 @@ import { projectsDataSchema } from "./schema";
 import { projectsContent } from "./content";
 
 // Log the raw content for debugging
-console.log('Raw projects content:', JSON.stringify(projectsContent, null, 2));
+//console.log('Raw projects content:', JSON.stringify(projectsContent, null, 2));
 
 const parsedData = projectsDataSchema.safeParse({
   title: projectsContent.title,
@@ -16,6 +16,6 @@ if (!parsedData.success) {
 }
 
 export const projectsData = parsedData.data;
-console.log('Successfully parsed projects data');
+//console.log('Successfully parsed projects data');
 
 export type { ProjectsData, Project, MediaItem, ContentBlock } from "./schema";
