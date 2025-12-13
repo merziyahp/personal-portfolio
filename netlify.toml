@@ -7,3 +7,18 @@
   from = "/*"
   to = "/index.html"
   status = 200
+  
+[[redirects]]
+from = "/apply"
+to = "/?utm_source=jobapp&utm_medium=application&utm_campaign=portfolio"
+status = 302
+
+[[redirects]]
+from = "/resume"
+to = "/?utm_source=resume&utm_medium=pdf&utm_campaign=portfolio"
+status = 302
+
+[[redirects]]
+from = "/linkedin"
+to = "/?utm_source=linkedin&utm_medium=social&utm_campaign=portfolio"
+status = 302
