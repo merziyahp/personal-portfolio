@@ -56,7 +56,52 @@ export default function Home() {
         <NewHero />
       </section>
 
-      {/* ...rest of your sections exactly as you have them ... */}
+      <section id="profile">
+        <ProfileSection />
+      </section>
+
+      <section id="about">
+        <About
+          description={portfolioData.about.description}
+          principles={portfolioData.about.principles}
+        />
+      </section>
+
+      <section id="career-highlights">
+        <CareerHighlights items={portfolioData.highlights.items} />
+      </section>
+
+      <section id="skills">
+        <Skills categories={portfolioData.skills.categories} />
+      </section>
+
+      <section id="case-studies">
+        <CaseStudies studies={portfolioData.caseStudies.studies} />
+      </section>
+
+      <section id="writing">
+        <Writing
+          title={writingData.title}
+          description={writingData.description}
+          substackUrl={writingData.substackUrl}
+          featured={writingData.featured}
+        />
+      </section>
+
+      <section id="side-projects" className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+@@ -66,12 +74,14 @@ export default function Home() {
+          </div>
+        </div>
+      </section>
+
+      <section id="personal-interests">
+        <PersonalInterests items={portfolioData.interests.items} />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
 
       <Footer />
     </div>
