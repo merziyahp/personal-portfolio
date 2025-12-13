@@ -16,19 +16,3 @@ createRoot(document.getElementById("root")!).render(
     </QueryClientProvider>
   </StrictMode>
 );
-
-// Run after React mounts DOM
-queueMicrotask(() => {
-  initSectionViewTracking([
-    "hero",
-    "profile",
-    "about",
-    "career-highlights",
-    "skills",
-    "case-studies",
-    "writing",
-    "side-projects",
-    "personal-interests",
-    "contact",
-  ]);
-});
