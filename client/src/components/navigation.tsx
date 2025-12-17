@@ -154,10 +154,20 @@ export function Navigation() {
                   href="/Resume.pdf"
                   download="Merziyah_Poonawala_Resume.pdf"
                   className="text-left text-gray-600 hover:text-orange-500 transition-colors duration-200 py-2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                  window.gtag?.("event", "resume_pdf_download", {
+                    link_url: "/Resume.pdf",
+                    link_text: "Resume",
+                    location: window.location.pathname,
+                    placement: "nav",
+                  });
+
+                setIsOpen(false);
+                }}
                 >
                   Resume
                 </a>
+
               </nav>
             </SheetContent>
           </Sheet>
