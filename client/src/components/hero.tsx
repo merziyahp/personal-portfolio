@@ -63,7 +63,7 @@ export function Hero({ name, title, bio }: HeroProps) {
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 font-medium"
           >
             <Download className="mr-2 h-4 w-4" />
-            Download Resume
+            Download Resume (TEST)
           </Button>
           <Button 
             onClick={scrollToContact}
