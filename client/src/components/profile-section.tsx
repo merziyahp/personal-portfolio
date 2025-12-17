@@ -3,6 +3,7 @@ import { Download, Mail } from "lucide-react";
 
 export function ProfileSection() {
   const handleDownloadResume = () => {
+    alert("resume click fired");
    const link = document.createElement('a');
     link.href = '/Resume.pdf';
     link.download = 'Merziyah_Poonawala_Resume.pdf';
