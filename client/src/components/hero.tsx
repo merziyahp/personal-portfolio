@@ -10,16 +10,17 @@ interface HeroProps {
 
 export function Hero({ name, title, bio }: HeroProps) {
   const handleDownloadResume = () => {
-    //gtag command to capture download
-    window.gtag?.("event", "resume_pdf_download", {
-      link_text: "Download Resume",
-      link_url: "/api/resume",
-      location: window.location.pathname,
-      outbound: false,
-    });
-    //------------
-    window.open("/api/resume", "_blank");
-  };
+  console.log("resume click", "gtag type:", typeof window.gtag);
+
+  window.gtag?.("event", "resume_pdf_download", {
+    link_text: "Download Resume",
+    link_url: "/api/resume",
+    location: window.location.pathname,
+  });
+
+  window.open("/api/resume", "_blank");
+};
+
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
