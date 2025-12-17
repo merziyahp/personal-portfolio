@@ -10,8 +10,15 @@ interface HeroProps {
 
 export function Hero({ name, title, bio }: HeroProps) {
   const handleDownloadResume = () => {
-    // In a real implementation, this would download the actual resume
-    window.open('/api/resume', '_blank');
+    //gtag command to capture download
+    window.gtag?.("event", "resume_pdf_download", {
+      link_text: "Download Resume",
+      link_url: "/api/resume",
+      location: window.location.pathname,
+      outbound: false,
+    });
+    //------------
+    window.open("/api/resume", "_blank");
   };
 
   const scrollToContact = () => {
