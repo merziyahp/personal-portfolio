@@ -10,20 +10,17 @@ interface HeroProps {
 
 export function Hero({ name, title, bio }: HeroProps) {
   const handleDownloadResume = () => {
-  alert("resume click fired");
-  window.open("/api/resume", "_blank");
-};
+//NOTE: I don't think this function is called. It's using the function that's under profile-section.tsx
+  //console.log("resume click", "gtag type:", typeof window.gtag);
 
-    //console.log("resume click", "gtag type:", typeof window.gtag);
+  window.gtag?.("event", "resume_pdf_download", {
+  link_text: "Download Resume",
+  link_url: "/api/resume",
+  location: window.location.pathname,
+  });
 
-  //window.gtag?.("event", "resume_pdf_download", {
-  //  link_text: "Download Resume",
-  //  link_url: "/api/resume",
-  //  location: window.location.pathname,
-  //});
-
-//  window.open("/api/resume", "_blank");
-//};
+window.open("/api/resume", "_blank");
+    };
 
 
   const scrollToContact = () => {
