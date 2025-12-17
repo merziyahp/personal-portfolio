@@ -3,12 +3,21 @@ import { Download, Mail } from "lucide-react";
 
 export function ProfileSection() {
   const handleDownloadResume = () => {
-    alert("resume click fired");
-   const link = document.createElement('a');
-    link.href = '/Resume.pdf';
-    link.download = 'Merziyah_Poonawala_Resume.pdf';
-    link.click();
-  };
+  // GA4 event
+  window.gtag?.("event", "resume_pdf_download", {
+    link_url: "/Resume.pdf",
+    link_text: "Resume download",
+    location: window.location.pathname,
+    placement: "profile", // change to "nav" in the nav handler
+  });
+
+  const link = document.createElement("a");
+  link.href = "/Resume.pdf";
+  link.download = "Merziyah_Poonawala_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+};
 
   const scrollToContact = () => {
     const element = document.getElementById('contact');
