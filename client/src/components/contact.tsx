@@ -11,42 +11,64 @@ export function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+  // Only fires when required fields passed validation and submit actually started
+  window.gtag?.("event", "contact_submit_attempt", {
+    location: window.location.pathname,
+    placement: "contact_form",
+  });
 
-    try {
-      const response = await fetch("https://formspree.io/f/manpabwj", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch("https://formspree.io/f/manpabwj", {
+      method: "POST",
+      body: formData,
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      window.gtag?.("event", "contact_submit_success", {
+        location: window.location.pathname,
+        placement: "contact_form",
       });
 
-      if (response.ok) {
-        toast({
-          title: "Message sent!",
-          description: "Thank you for your message. I'll get back to you soon."
-        });
-        form.reset();
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
       toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive"
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
       });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+      form.reset();
+    } else {
+      window.gtag?.("event", "contact_submit_error", {
+        location: window.location.pathname,
+        placement: "contact_form",
+        error_type: "non_200_response",
+      });
 
+      throw new Error("Form submission failed");
+    }
+  } catch (error: any) {
+    window.gtag?.("event", "contact_submit_error", {
+      location: window.location.pathname,
+      placement: "contact_form",
+      error_type: "exception",
+      error_message: String(error?.message || "unknown"),
+    });
+
+    toast({
+      title: "Error",
+      description: "Failed to send message. Please try again.",
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   return (
     <section id="contact" className="py-16 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
