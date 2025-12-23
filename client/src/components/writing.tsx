@@ -40,7 +40,16 @@ export function Writing({ title, description, substackUrl, featured }: WritingPr
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors duration-200"
+            onClick={() => {
+              window.gtag?.("event", "substack_click", {
+                link_url: substackUrl,
+                link_text: "Visit My Substack",
+                location: window.location.pathname,
+                placement: "writing_section",
+              });
+            }}
           >
+            
             Visit My Substack
             <ExternalLink className="w-4 h-4" />
           </a>
@@ -56,6 +65,14 @@ export function Writing({ title, description, substackUrl, featured }: WritingPr
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-2"
+                    onClick={() => {
+                      window.gtag?.("event", "article_click", {
+                        link_url: article.url,
+                        article_title: article.title,
+                        location: window.location.pathname,
+                        placement: "writing_featured",
+                      });
+                    }}
                   >
                     {article.title}
                     <ExternalLink className="w-4 h-4 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
