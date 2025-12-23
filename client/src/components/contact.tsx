@@ -113,6 +113,13 @@ export function Contact() {
                 </div>
                 <Button 
                   type="submit" 
+                  onClick={() => {
+                    window.gtag?.("event", "contact_send_click", {
+                      location: window.location.pathname,
+                      placement: "contact_form",
+                      is_submitting: Boolean(isSubmitting),
+                    });
+                  }}
                   className="w-full bg-orange-500 hover:bg-orange-600"
                   disabled={isSubmitting}
                 >
