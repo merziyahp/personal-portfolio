@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile — Merziyah Poonawala</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #ede9e0; --ink-soft: #b0aca0;
+    --paper: #101f1c; --paper-deep: #172a26;
+    --accent: #c9a35c; --accent-deep: #d8b673; --line: #2a3c37;
+    --serif: 'Source Serif 4', Georgia, serif; --sans: 'Inter', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); line-height: 1.65; font-size: 17px; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.2; }
+  a { color: var(--accent-deep); }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  header { padding: 80px 0 50px; border-bottom: 1px solid var(--line); }
+  header h1 { font-size: clamp(34px, 5vw, 48px); margin-bottom: 12px; }
+  header p { color: var(--ink-soft); max-width: 58ch; }
+  .back { display: inline-block; margin-bottom: 28px; font-size: 14.5px; text-decoration: none; color: var(--ink-soft); }
+  .btn { display: inline-block; background: var(--accent); color: #101f1c; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 100px; text-decoration: none; margin-top: 24px; }
+  .btn:hover { background: var(--accent-deep); }
+  section { padding: 50px 0; border-bottom: 1px solid var(--line); }
+  section h2 { font-size: 27px; margin-bottom: 22px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  @media (max-width: 640px) { .stats { grid-template-columns: 1fr; } }
+  .stat .num { font-family: var(--serif); font-size: 38px; color: var(--accent); }
+  .stat p { font-size: 15px; color: var(--ink-soft); }
+  .pills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill { background: var(--paper-deep); border: 1px solid var(--line); border-radius: 100px; padding: 7px 16px; font-size: 14px; color: var(--ink-soft); }
+  .body-text { color: var(--ink-soft); max-width: 62ch; margin-bottom: 16px; }
+  ul.known-for { list-style: none; }
+  ul.known-for li { margin-bottom: 14px; color: var(--ink-soft); max-width: 62ch; }
+  ul.known-for li strong { color: var(--ink); }
+  footer { padding: 36px 0; font-size: 14.5px; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to the practice</a>
+    <div class="eyebrow">Profile</div>
+    <h1>Merziyah Poonawala</h1>
+    <p>Senior product leader · a decade of 0→1 across healthcare, civic-tech, and marketplaces. This page is the background: the track record, the skills, the resume. For how I work with clients, head back to the <a href="index.html">main page</a>.</p>
+    <!-- TODO: link actual resume PDF -->
+    <a class="btn" href="#resume">Download Resume</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Career highlights</h2>
+    <div class="stats">
+      <div class="stat"><div class="num">$85M</div><p>Funding enabled for startups through user insights and strategic product decisions</p></div>
+      <div class="stat"><div class="num">6+</div><p>MVPs delivered on 3–6 month timelines, for products with TAMs of $12M–$600M/year</p></div>
+      <div class="stat"><div class="num">10+</div><p>Product teams mentored in agile execution, user research, and roadmap strategy</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What I'm known for</h2>
+    <ul class="known-for">
+      <li><strong>Clarity from ambiguity.</strong> I bring structure to complex problems - clarifying what success looks like, then creating the focus and definition around how to get there.</li>
+      <li><strong>Workflow &amp; systems thinking.</strong> I connect people, process, and product, and design simple, functional systems that make work flow naturally.</li>
+      <li><strong>Pragmatic execution.</strong> I scope what matters, deliver fast, learn quickly, and keep progress moving - even on tight timelines.</li>
+      <li><strong>Trusted ownership.</strong> When I take something on, people stop worrying about it.</li>
+      <li><strong>Team alignment &amp; calm.</strong> Steady under pressure, clear in communication, focused on what actually matters.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Skills &amp; expertise</h2>
+    <div class="pills">
+      <span class="pill">Product Vision &amp; Strategy</span>
+      <span class="pill">Product Discovery</span>
+      <span class="pill">Strategic Roadmaps</span>
+      <span class="pill">Cross-functional Leadership</span>
+      <span class="pill">Stakeholder Management</span>
+      <span class="pill">User Research &amp; Testing</span>
+      <span class="pill">Customer Journey Mapping</span>
+      <span class="pill">Agile Methodologies</span>
+      <span class="pill">Data Analysis · SQL · Python</span>
+      <span class="pill">AI-Augmented Product Workflows</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Writing &amp; side projects</h2>
+    <p class="body-text">Thoughts on product management, AI-augmented workflows, and rapid prototyping - including the "Tools I Built" series.</p>
+    <!-- TODO: replace with actual Substack URL -->
+    <p class="body-text"><a href="#substack">Visit my Substack →</a></p>
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="body-text"><a href="mailto:hello@merziyah.com">hello@merziyah.com</a> · <a href="https://linkedin.com/in/merziyahpoonawala">LinkedIn</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Merziyah Poonawala · <a href="index.html">Back to the practice</a></div>
+</footer>
+
+</body>
+</html>
