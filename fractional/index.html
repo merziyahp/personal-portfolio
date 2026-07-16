@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merziyah Poonawala — Fractional Product Leadership</title>
+<meta name="description" content="Your roadmap is missing a reality. I can find it. Fractional product leadership for funded startups without a senior product leader.">
+<meta property="og:title" content="Merziyah Poonawala — Fractional Product Leadership">
+<meta property="og:description" content="Your roadmap is missing a reality. I can find it.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Calm Authority: deep forest ground, bone text, muted gold */
+    --ink: #ede9e0;         /* text */
+    --ink-soft: #b0aca0;    /* soft text */
+    --paper: #101f1c;       /* page ground */
+    --paper-deep: #172a26;  /* alt sections */
+    --accent: #c9a35c;      /* muted gold */
+    --accent-deep: #d8b673; /* links (lighter for dark ground) */
+    --line: #2a3c37;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.65;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.15; }
+  em { font-style: italic; }
+  h1 em, h2 em { color: var(--accent); }
+  a { color: var(--accent-deep); }
+
+  .eyebrow {
+    font-family: var(--sans); font-size: 13px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .btn {
+    display: inline-block; background: var(--accent); color: #101f1c;
+    font-family: var(--sans); font-weight: 600; font-size: 16px;
+    padding: 15px 30px; border-radius: 100px; text-decoration: none;
+    transition: background .18s ease, transform .18s ease;
+  }
+  .btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
+
+  /* ---- Nav ---- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(16,31,28,.92); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 24px; max-width: 1060px; margin: 0 auto;
+  }
+  .nav-name { font-family: var(--serif); font-size: 20px; font-weight: 600; color: var(--ink); text-decoration: none; }
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a { color: var(--ink-soft); text-decoration: none; font-size: 15px; font-weight: 500; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links .btn { padding: 10px 20px; font-size: 14px; }
+  @media (max-width: 720px) { .nav-links a:not(.btn) { display: none; } }
+
+  /* ---- Hero ---- */
+  header { padding: 110px 0 100px; }
+  header h1 { font-size: clamp(40px, 6.2vw, 68px); max-width: 15ch; letter-spacing: -0.01em; }
+  header .lede { max-width: 56ch; margin: 30px 0 14px; font-size: 19px; color: var(--ink-soft); }
+  header .intro { max-width: 56ch; margin-bottom: 38px; font-size: 19px; color: var(--ink-soft); }
+
+  /* ---- Sections ---- */
+  section { padding: 90px 0; }
+  section.deep { background: var(--paper-deep); }
+  section.dark { background: #0a1513; color: var(--ink); }
+  section h2 { font-size: clamp(30px, 4vw, 44px); max-width: 22ch; margin-bottom: 28px; }
+  .section-body { max-width: 62ch; color: var(--ink-soft); }
+  .dark .section-body { color: var(--ink-soft); }
+
+  /* Problem cards */
+  .persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 44px 0 36px; }
+  @media (max-width: 760px) { .persona-grid { grid-template-columns: 1fr; } }
+  .persona {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+    padding: 34px;
+  }
+  .persona h3 { font-size: 24px; margin-bottom: 14px; }
+  .persona p { color: var(--ink-soft); font-size: 16.5px; }
+  .disease {
+    font-family: var(--serif); font-size: clamp(20px, 2.6vw, 25px); line-height: 1.5;
+    max-width: 34ch; font-style: italic;
+  }
+  .disease strong { color: var(--accent); font-weight: 500; }
+
+  /* Lenses */
+  .lens-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 44px 0; }
+  @media (max-width: 760px) { .lens-grid { grid-template-columns: 1fr; } }
+  .lens { border-top: 3px solid var(--accent); padding-top: 22px; }
+  .lens .num { font-family: var(--serif); font-size: 15px; color: var(--accent); letter-spacing: .08em; }
+  .lens h3 { font-size: 25px; margin: 8px 0 12px; }
+  .lens p { color: var(--ink-soft); font-size: 16.5px; }
+
+  /* Offers */
+  .offer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 44px; }
+  @media (max-width: 760px) { .offer-grid { grid-template-columns: 1fr; } }
+  .offer {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 14px;
+    padding: 40px 34px; display: flex; flex-direction: column;
+  }
+  .offer.featured { border: 2px solid var(--accent); }
+  .offer .tag {
+    font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 14px;
+  }
+  .offer h3 { font-size: 28px; margin-bottom: 8px; }
+  .offer .meta { font-size: 14.5px; font-weight: 600; color: var(--ink-soft); margin-bottom: 18px; }
+  .offer p { color: var(--ink-soft); font-size: 16.5px; margin-bottom: 12px; }
+  .offer p:last-of-type { margin-bottom: 0; }
+
+  /* Case studies */
+  .case { border-top: 1px solid var(--line); padding: 44px 0; display: grid; grid-template-columns: 260px 1fr; gap: 40px; }
+  @media (max-width: 760px) { .case { grid-template-columns: 1fr; gap: 16px; } }
+  .case:last-of-type { border-bottom: 1px solid var(--line); }
+  .case h3 { font-size: 25px; }
+  .case .client-type { font-size: 14px; color: var(--ink-soft); margin-top: 6px; }
+  .case .beat { margin-bottom: 18px; }
+  .case .beat:last-child { margin-bottom: 0; }
+  .case .beat-label {
+    font-size: 12.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 4px;
+  }
+  .case .beat p { color: var(--ink-soft); font-size: 16.5px; max-width: 62ch; }
+
+  /* Tools */
+  .dark h2 em { color: var(--accent); }
+  .dark a { color: var(--accent-deep); }
+
+  /* About */
+  .triad { font-family: var(--serif); font-style: italic; font-size: clamp(22px, 3vw, 30px); line-height: 1.45; max-width: 24ch; margin-bottom: 36px; }
+  .triad span { color: var(--accent); }
+
+  /* Final CTA */
+  .cta-final { text-align: center; padding: 110px 0; }
+  .cta-final h2 { margin: 0 auto 20px; }
+  .cta-final p { max-width: 48ch; margin: 0 auto 36px; color: var(--ink-soft); }
+  .cta-final .sub { font-size: 15px; margin-top: 22px; color: var(--ink-soft); }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0; font-size: 14.5px; color: var(--ink-soft); }
+  .footer-inner { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Merziyah Poonawala</a>
+    <div class="nav-links">
+      <a href="#problem">The Problem</a>
+      <a href="#method">How I Work</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#about">About</a>
+      <a class="btn" href="https://cal.com/merziyahp/quick-chat">Book a Call</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="wrap">
+  <div class="eyebrow">Fractional Product Leadership</div>
+  <h1>Your roadmap is missing a reality. <em>I can find it.</em></h1>
+  <p class="lede">Most product plans don't fail from lack of talent. They fail because a specific reality is missing from the requirements - and everyone is too busy shipping to notice.</p>
+  <p class="intro">I'm Merziyah Poonawala. I help funded startups find the reality their roadmap is missing, before the market finds it for them. Fractional product leadership for teams that don't have a senior product leader yet.</p>
+  <a class="btn" href="https://cal.com/merziyahp/quick-chat">Book a Call</a>
+</header>
+
+<section id="problem" class="deep">
+  <div class="wrap">
+    <div class="eyebrow">The Problem</div>
+    <h2>Sound familiar?</h2>
+    <div class="persona-grid">
+      <div class="persona">
+        <h3>You're the founder.</h3>
+        <p>You raised 12–18 months ago. The team shipped what was on the plan. And usage is quiet - quieter than anyone wants to say out loud in the board meeting. The instinct is to ship more. The instinct is wrong.</p>
+      </div>
+      <div class="persona">
+        <h3>You're the new VP of Product.</h3>
+        <p>The company's first, actually. You inherited a roadmap that zigzags - every feature is someone's new hypothesis, and each sprint quietly relitigates strategy. You're expected to fix the strategy and build the product operation at the same time. That's two jobs.</p>
+      </div>
+    </div>
+    <p class="disease">Different symptoms, same disease: the team committed to a solution <strong>before the problem was validated</strong>. That's not a talent gap, that's a structural one - and it doesn't fix itself by shipping faster.</p>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="eyebrow">How I Work · The Missing Reality</div>
+    <h2>Every struggling roadmap is missing <em>a specific reality.</em></h2>
+    <p class="section-body">A user whose actual workflow nobody mapped. A buyer who was never asked to pay. A risk everyone agreed not to look at. My practice is built on finding it - through two lenses.</p>
+    <div class="lens-grid">
+      <div class="lens">
+        <span class="num">Lens 01</span>
+        <h3>Whose reality is missing?</h3>
+        <p>I map the requirements against the people they were written for - then against the people who actually use and pay. The gap between those two is usually where the traction went.</p>
+      </div>
+      <div class="lens">
+        <span class="num">Lens 02</span>
+        <h3>What's riskiest to leave unfixed?</h3>
+        <p>Every plan has one assumption that, if wrong, sinks the rest. I find the point where the build diverges most from confirmed reality and derisk that first. Not the easiest fix. The riskiest gap.</p>
+      </div>
+    </div>
+    <p class="section-body" style="margin-bottom:18px;">Some of my strongest catches happened before a line of code was written. For funded, post-build companies, I apply the same lens retroactively: where did what you built diverge from what's real, and what happens if you leave it?</p>
+    <p class="section-body"><strong style="color:var(--ink);">And the fix is usually smaller than you fear.</strong> I work iteratively - small, precise corrections that bring the system you have up to level, not a rip-and-replace of your roadmap or your process. Overhauls are how consultants justify themselves. Small tweaks that hold are how products actually get healthy.</p>
+  </div>
+</section>
+
+<section class="deep">
+  <div class="wrap">
+    <div class="eyebrow">Ways to Work Together</div>
+    <h2>Start small. <em>Decide with evidence.</em></h2>
+    <div class="offer-grid">
+      <div class="offer featured">
+        <div class="tag">Start Here</div>
+        <h3>The Clarity Sprint</h3>
+        <div class="meta">1–2 weeks · fixed scope · fixed price</div>
+        <p>The two-lens diagnostic, applied to what you've already built. You get a written diagnostic - the missing reality, the highest-risk gap - and a re-sequenced plan for what to do next.</p>
+        <p>It ends in an explicit decision point. No forced continuation, no retainer ambush.</p>
+      </div>
+      <div class="offer">
+        <div class="tag">Where Sprints Often Lead</div>
+        <h3>Fractional Product Leadership</h3>
+        <div class="meta">Ongoing · part-time · embedded</div>
+        <p>For teams ready to close what the sprint found. I work inside your team as your product leader: closing the gaps, and installing the operating system that keeps roadmap and reality aligned after I'm gone.</p>
+        <p>A founding PM is a $180K+ salary, equity, and a four-month search. This starts next week.</p>
+      </div>
+    </div>
+    <div style="margin-top:40px;"><a class="btn" href="https://cal.com/merziyahp/quick-chat">Book a Call</a></div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="eyebrow">Case Studies</div>
+    <h2>Realities <em>I've found.</em></h2>
+
+    <div class="case" style="margin-top:44px;">
+      <div>
+        <h3>Hematogenix</h3>
+        <div class="client-type">Clinical lab platform</div>
+      </div>
+      <div>
+        <div class="beat">
+          <span class="beat-label">The Missing Reality</span>
+          <p>The requirements arrived handed-down and looking complete. I verified them against the people they'd actually land on and found the data entry technicians had never been part of the conversation - the new design would have made their work slower and more error-prone, and nobody would have known until after launch.</p>
+        </div>
+        <div class="beat">
+          <span class="beat-label">What Changed</span>
+          <p>Incorporated their reality in the smallest change possible, negotiated the scope with the client and execs, and delivered. No major rework. And the technicians were happy - which is rarer than it sounds.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <h3>GameChanger</h3>
+        <div class="client-type">Youth sports · millions of users</div>
+      </div>
+      <div>
+        <div class="beat">
+          <span class="beat-label">The Missing Reality</span>
+          <p>The obvious plan was to rebuild the mobile app on the web. Research said users didn't need a rebuild - they needed specific workflows first, which gave us a roadmap for fast delivery instead of a long port.</p>
+        </div>
+        <div class="beat">
+          <span class="beat-label">What Changed</span>
+          <p>First web version shipped in 2 months, expanded as the season progressed. Usage doubled in year one; support tickets dropped 30%.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <h3>VaultBeauty</h3>
+        <div class="client-type">Two-sided beauty marketplace</div>
+      </div>
+      <div>
+        <div class="beat">
+          <span class="beat-label">The Missing Reality</span>
+          <p>Research pointed to an uncomfortable possibility - the segment the product was aimed at wasn't the segment that would pay. Instead of betting the roadmap on a hunch, we built a simple experiment into the MVP to confirm it.</p>
+        </div>
+        <div class="beat">
+          <span class="beat-label">What Changed</span>
+          <p>Pivot confirmed, moved upmarket, 2x revenue per user.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case">
+      <div>
+        <h3>TwentyEight Health</h3>
+        <div class="client-type">Telehealth for women</div>
+      </div>
+      <div>
+        <div class="beat">
+          <span class="beat-label">The Missing Reality</span>
+          <p>Three months on the clock, and a plan bigger than the runway. The market question needed three things proven - onboarding, payment, scheduling. The work was deciding what was core and what could wait.</p>
+        </div>
+        <div class="beat">
+          <span class="beat-label">What Changed</span>
+          <p>MVP in 3 months, market need validated, $10M+ raised on the result.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow">The Tools Advantage</div>
+    <h2>The practice runs on <em>tools I build.</em></h2>
+    <p class="section-body" style="margin-bottom:18px;">When a diagnostic needs a prototype to test against reality, I don't book a discovery sprint for next quarter - I build it that week. Working prototypes in days, research synthesis agents, product workflows with AI in the loop.</p>
+    <p class="section-body" style="margin-bottom:28px;">The point isn't the tools, it's the speed: assumptions get tested while they're still cheap to be wrong about.</p>
+    <p class="section-body">I write about what I build on <a href="#substack">Substack</a> - the honest versions, tradeoffs included.</p>
+    <!-- TODO: replace #substack with actual Substack URL -->
+  </div>
+</section>
+
+<section id="about" class="deep">
+  <div class="wrap">
+    <div class="eyebrow">About</div>
+    <p class="triad">Curious enough to explore the unknown. Pragmatic enough to ship it. <span>Adventurous enough to try again.</span></p>
+    <p class="section-body" style="margin-bottom:18px;">I've spent the past decade helping startups and mission-driven teams across healthcare, civic-tech, and marketplaces take products from concept to launch - defining what to build, why it matters, and how to get it shipped. Along the way I've helped teams secure $85M in funding, launched six MVPs on 3–6 month timelines, and mentored ten-plus product teams (some of whom still send me their roadmaps to poke holes in).</p>
+    <p class="section-body" style="margin-bottom:18px;">The pattern I kept seeing - the one this practice is built on - is that teams rarely fail at building. They fail at knowing what's real before they build. I got good at spotting that gap early. Now it's the whole job.</p>
+    <p class="section-body">Off the clock: reading, experimenting with AI tools that occasionally work (the receipt scanner did, eventually), and trying things that intimidate me.</p>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Not sure which reality <em>your</em> roadmap is missing?</h2>
+    <p>That's normal - it's missing precisely because it's hard to see from inside. A 30-minute call is enough to tell whether I can help. No deck, no pitch.</p>
+    <a class="btn" href="https://cal.com/merziyahp/quick-chat">Book a Call</a>
+    <p class="sub"><a href="mailto:hello@merziyah.com">hello@merziyah.com</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Merziyah Poonawala · The Missing Reality</div>
+    <div>
+      <a href="https://linkedin.com/in/merziyahpoonawala">LinkedIn</a> ·
+      <a href="#substack">Substack</a> ·
+      <a href="profile.html">Full-time profile &amp; resume →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
